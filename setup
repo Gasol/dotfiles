@@ -33,7 +33,7 @@ function link {
 		fi
 	fi
 
-	ln -sfv $srcfile $destfile
+	ln -sfnv $srcfile $destfile
 }
 
 for file in _*; do
