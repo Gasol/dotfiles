@@ -1,0 +1,20 @@
+#!/bin/bash
+
+function load_rcfile {
+    if [ -d $1 ]; then
+        for content in `ls $1`; do
+            if [ -d $1 ]; then
+                load_rcfile $1/$content
+            elif [ -f $1 ]; then
+                source $1/$content
+            fi
+        done
+    elif [ -f $1 ]; then
+        source $1
+    fi
+}
+
+load_rcfile ~/.bash/rc.os/`uname -s`
+load_rcfile ~/.bash/rc.host/$HOSTNAME
+load_rcfile ~/.bash/rc
+load_rcfile ~/.bash/misc

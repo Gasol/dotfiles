@@ -1,0 +1,23 @@
+# vim: set ft=sh:
+alias ..='cd ..'
+alias ...='cd ../..'
+
+case $(uname -s) in 
+	Linux)
+		alias ls='ls --color=auto'
+		alias ll='ls -alF'
+		alias la='ls -A'
+		;;
+	Darwin)
+		alias ls="ls -GF"
+		alias la="ls -AF"
+		alias ll="ls -lF"
+		alias vi="vim"
+		#enables color in the terminal bash shell export
+		export CLICOLOR=1
+		#sets up the color scheme for list export
+		export LSCOLORS="ExfxcxdxbxEgEdabagacad"
+		;;
+esac
+
+alias today="date '+%Y%m%d'"

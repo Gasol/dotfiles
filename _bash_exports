@@ -1,0 +1,22 @@
+# vim: set ft=sh:
+
+export GREP_OPTIONS='--color=auto --mmap --exclude-dir=\.svn'
+
+export MANPAGER="/usr/bin/most -s"
+
+export EDITOR="vim"
+export DEBFULLNAME="Gasol Wu"
+export DEBEMAIL="gasol.wu@gmail.com"
+export JAVA_HOME="/usr/lib/jvm/java-6-sun"
+export APPENGINE_HOME="/usr/local/share/google_appengine"
+export PLAY_HOME="/usr/local/share/play"
+export MAVEN_HOME="/usr/local/share/apache-maven"
+
+export PATH="$HOME/bin:$PLAY_HOME:$MAVEN_HOME/bin:$APPENGINE_HOME:$PATH"
+
+if [ -e $HOME/.ec2 ]; then
+	export EC2_PRIVATE_KEY="$HOME/.ec2/pk-*.pem"
+	export EC2_CERT="$HOME/.ec2/cert-*.pem"
+	export EC2_HOME="/usr/local/share/ec2-api-tools"
+	export PATH="$EC2_HOME/bin:$PATH"
+fi

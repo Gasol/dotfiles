@@ -1,0 +1,27 @@
+# vim: set ft=readline:
+
+# If set to On, readline will enable eight-bit input (that is, it will not clear the eighth bit in the characters it reads), regardless of what the terminal claims it can support. The name meta-flag is a synonym for this variable.
+set input-meta on
+set meta-flag on
+
+# If set to On, readline will display characters with the eighth bit set directly rather than as a meta-prefixed escape sequence.
+set output-meta on
+
+# If set to On, readline will convert characters with the eighth bit set to an ASCII key sequence by stripping the eighth bit and prefixing it with an escape character (in effect, using escape as the meta prefix).
+set convert-meta off
+
+# some defaults / modifications for the emacs mode
+$if mode=emacs
+
+# allow the use of the Home/End keys
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+# mappings for Ctrl-left-arrow and Ctrl-right-arrow for word moving
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word
+
+$endif
