@@ -1,6 +1,13 @@
 # vim: set ft=sh:
 
-export GREP_OPTIONS='--color=auto --mmap --exclude-dir=\.svn'
+case $(uname -s) in
+	Linux)
+		export GREP_OPTIONS='--color=auto --mmap --exclude-dir=\.svn --exclude-dir=\.git --exclude=*\.swp'
+	;;
+	Darwin)
+		export GREP_OPTIONS='--color=auto --mmap --exclude=*\.swp'
+	;;
+esac
 
 export MANPAGER="/usr/bin/most -s"
 
