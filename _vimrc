@@ -28,3 +28,4 @@ autocmd FileType python syntax keyword pythonDecorator True None False self
 autocmd FileType css set omnifunc=csscomplete
 autocmd BufNewFile,BufRead *.phtml so set filetype=php
 autocmd BufNewFile,BufRead *.mako so set filetype=mako
+autocmd BufNewFile,BufRead *.gradle so set filetype=groovy
