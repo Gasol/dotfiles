@@ -29,3 +29,6 @@ autocmd FileType css set omnifunc=csscomplete
 autocmd BufNewFile,BufRead *.phtml so set filetype=php
 autocmd BufNewFile,BufRead *.mako so set filetype=mako
 autocmd BufNewFile,BufRead *.gradle so set filetype=groovy
+
+map th :tabprev<CR>
+map tl :tabnext<CR>
