@@ -1,17 +1,25 @@
 # vim: set ft=sh:
 
+type -P most &>/dev/null
+if [ $? == 0 ]; then
+	MOST=$(which most)
+fi
+
 case $(uname -s) in
 	Linux)
 		export GREP_OPTIONS='--color=auto --mmap --exclude-dir=\.svn --exclude-dir=\.git --exclude=*\.swp'
+		if [ -n $MOST ]; then export MANPAGER="$MOST -s"; fi
 	;;
 	Darwin)
+		export GREP_OPTIONS='--color=auto --mmap --exclude=*\.swp'
+		if [ -n $MOST ]; then export MANPAGER="$MOST -s"; fi
+	;;
+	FreeBSD)
+		if [ -n $MOST ]; then alias man="man -P $MOST"; fi
 		export GREP_OPTIONS='--color=auto --mmap --exclude=*\.swp'
 	;;
 esac
 
-if [ -e /usr/bin/most ]; then
-	export MANPAGER="/usr/bin/most -s"
-fi
 
 export EDITOR="vim"
 export DEBFULLNAME="Gasol Wu"
