@@ -35,3 +35,11 @@ autocmd BufNewFile,BufRead *.gradle so set filetype=groovy
 
 map th :tabprev<CR>
 map tl :tabnext<CR>
+
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
