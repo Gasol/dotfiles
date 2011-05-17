@@ -10,10 +10,12 @@ set ru
 set encoding=utf-8
 set fileencoding=utf-8
 set mouse=a
-set cursorline
 set cursorcolumn
 set modeline
-colorscheme wombat256
+set nocompatible
+set backspace=indent,eol,start
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
+set history=50
 
 filetype plugin indent on
 
