@@ -1,0 +1,44 @@
+# vim: set ft=screen:
+startup_message off
+
+defutf8 on
+deflogin on
+autodetach on
+
+attrcolor b ".i"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce "on" 
+               
+# Log 10000 lines
+defscrollback 10000
+
+vbell off
+#vbell_msg "   Wuff  ----  Wuff!!  "
+msgwait 5
+
+# Turns off alternate screen switching in xterms,
+# so that text in screen will go into the xterm's scrollback buffer:
+termcapinfo xterm* ti@:te@
+altscreen on
+
+#remove some stupid / dangerous key bindings
+bind ^k
+#bind L
+bind ^\
+#make them better
+bind \\ quit
+bind K kill
+bind I login on
+bind O login off
+bind } history
+
+bindkey -k k2 screen                                    # F2  | Create new window
+bindkey -k k3 prev                                      # F3  | Previous Window
+bindkey -k k4 next                                      # F4  | Next Window
+bindkey -k k6 detach                                    # F6  | Detach from this session
+bindkey -k k7 copy                                      # F7  | Enter copy/scrollback mode
+register t "^aA^aa^k^h"                                 #     | Goes with the F8 definition
+bindkey -k k8 process t                                 # F8  | Re-title a window
+
+caption always "%-w%<%{=B GK}%n %t%{= KW}%+w"
+hardstatus alwayslastline "%{=b BW} {%l}%018=%{=b WK} %n %t %-029=%{YK} %Y %M %d(%D) %{RW} %C %A"
