@@ -12,6 +12,7 @@ set fileencoding=utf-8
 set mouse=a
 set cursorcolumn
 set modeline
+set background=dark
 set nocompatible
 set backspace=indent,eol,start
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
