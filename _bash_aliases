@@ -7,7 +7,7 @@ case $(uname -s) in
 		alias ls='ls --color=auto'
 		alias ll='ls -alF'
 		alias la='ls -A'
-		alias juniper='juniper -nojava'
+		alias junipernc='junipernc -nojava'
 		;;
 	Darwin|FreeBSD)
 		alias ls="ls -GF"
