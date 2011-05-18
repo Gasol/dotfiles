@@ -8,6 +8,7 @@ case $(uname -s) in
 		alias ll='ls -alF'
 		alias la='ls -A'
 		alias junipernc='junipernc -nojava'
+		alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
 		;;
 	Darwin|FreeBSD)
 		alias ls="ls -GF"
