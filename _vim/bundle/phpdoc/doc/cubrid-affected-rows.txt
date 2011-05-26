@@ -1,0 +1,44 @@
+cubrid_affected_rows -- Return the number of rows affected by the last SQL
+statement
+
+  int cubrid_affected_rows([resource result])~
+
+The |cubrid_affected_rows| function is used to get the number of rows affected
+by the SQL statement (INSERT, DELETE, UPDATE).
+
+{result} Result. If the result is not specified, the last result is assumed.
+
+Number of rows affected by the SQL statement, when process is successful.
+
+-1, when SQL statement is not INSERT, DELETE or UPDATE.
+
+FALSE, when the request identifier is not specified, and there is no last
+request.
+
+|cubrid_affected_rows| example
+
+<?php >
+  $conn = cubrid_connect("localhost", 33000, "demodb");
+  
+  @cubrid_execute($conn, "DROP TABLE cubrid_test");
+  cubrid_execute($conn, "CREATE TABLE cubrid_test (t varchar)");
+  
+  for ($i = 0; $i < 5; $i++) {
+      cubrid_execute($conn, "INSERT INTO cubrid_test(t) VALUES('cubrid_test')");
+  }
+  
+  cubrid_execute($conn, "DELETE FROM cubrid_test");
+  
+  $affected_num = cubrid_affected_rows();
+  var_dump($affected_num);
+  
+  cubrid_disconnect($conn);
+?>
+
+The above example will output:
+
+  int(5)
+
+|cubrid_execute|
+
+vim:ft=help:
