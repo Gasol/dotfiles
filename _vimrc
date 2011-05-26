@@ -10,7 +10,6 @@ set ru
 set encoding=utf-8
 set fileencoding=utf-8
 set mouse=a
-set cursorcolumn
 set modeline
 set background=dark
 set nocompatible

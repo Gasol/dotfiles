@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/gasol/.local/share/byobu/byobu'
+let g:netrw_dirhist_2='/usr/share/byobu/profiles'
+let g:netrw_dirhist_3='/home/gasol/tmp/debs/cassandra-0.8.0~rc1/debian/patches'
+let g:netrw_dirhist_4='/home/gasol/tmp/debs/pdo-user-0.3.0/tests'
+let g:netrw_dirhist_5='/home/gasol/tmp/debs/pdo-user-0.3.0/debian'
