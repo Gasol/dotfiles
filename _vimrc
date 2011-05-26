@@ -1,5 +1,5 @@
 call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+" call pathogen#helptags()
 
 syntax on
 set t_Co=256
@@ -28,6 +28,7 @@ autocmd FileType php set omnifunc=phpcomplete
 autocmd FileType py set omnifunc=pythoncomplete
 autocmd FileType python syntax keyword pythonDecorator True None False self
 autocmd FileType css set omnifunc=csscomplete
+autocmd BufNewFile,BufRead *.php set keywordprg="help"
 autocmd BufNewFile,BufRead *.phtml so set filetype=php
 autocmd BufNewFile,BufRead *.mako so set filetype=mako
 autocmd BufNewFile,BufRead *.gradle so set filetype=groovy
