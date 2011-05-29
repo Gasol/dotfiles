@@ -22,8 +22,10 @@ case $(uname -s) in
 		if [ -n "$MOST" ]; then export MANPAGER="$MOST -s"; fi
 	;;
 	FreeBSD)
-		if [ -n "$MOST" ]; then alias man="man -P $MOST"; fi
+		export DEV_HOME="$HOME/dev"
+		export JAVA_HOME="/usr/local/diablo-jdk1.6.0"
 		export GREP_OPTIONS='--color=auto --mmap --exclude=*\.swp'
+		if [ -n "$MOST" ]; then alias man="man -P $MOST"; fi
 	;;
 esac
 
@@ -31,16 +33,16 @@ esac
 export EDITOR="vim"
 export DEBFULLNAME="Gasol Wu"
 export DEBEMAIL="gasol.wu@gmail.com"
-export APPENGINE_HOME="/usr/local/share/google_appengine"
-export PLAY_HOME="/usr/local/share/play"
-export MAVEN_HOME="/usr/local/share/apache-maven"
-export ANT_HOME="/usr/local/share/apache-ant"
+export APPENGINE_HOME="$DEV_HOME/google_appengine"
+export PLAY_HOME="$DEV_HOME/play"
+export MAVEN_HOME="$DEV_HOME/apache-maven"
+export ANT_HOME="$DEV_HOME/apache-ant"
 
 export PATH="$HOME/bin:$ANT_HOME/bin:$PLAY_HOME:$MAVEN_HOME/bin:$APPENGINE_HOME:$PATH"
 
 if [ -e $HOME/.ec2 ]; then
 	export EC2_PRIVATE_KEY="$HOME/.ec2/pk-*.pem"
 	export EC2_CERT="$HOME/.ec2/cert-*.pem"
-	export EC2_HOME="/usr/local/share/ec2-api-tools"
+	export EC2_HOME="$DEV_HOME/ec2-api-tools"
 	export PATH="$EC2_HOME/bin:$PATH"
 fi
