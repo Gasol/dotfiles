@@ -38,6 +38,7 @@ export PLAY_HOME="$DEV_HOME/play"
 export MAVEN_HOME="$DEV_HOME/apache-maven"
 export ANT_HOME="$DEV_HOME/apache-ant"
 export AWS_IAM_HOME="$DEV_HOME/IAMCli-1.2.0"
+export TITANIUM_HOME="$DEV_HOME/Titanium\\ Developer-1.2.2"
 
 export PATH="$HOME/bin:$AWS_IAM_HOME/bin:$ANT_HOME/bin:$PLAY_HOME:$MAVEN_HOME/bin:$APPENGINE_HOME:$PATH"
 
