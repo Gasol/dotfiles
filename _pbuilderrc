@@ -6,3 +6,5 @@ export CCACHE_DIR="/var/cache/pbuilder/ccache"
 export PATH="/usr/lib/ccache:$PATH"
 EXTRAPACKAGES=ccache
 BINDMOUNTS="$CCACHE_DIR"
+
+COMPONENTS="main universe"
