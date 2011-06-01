@@ -1,0 +1,18 @@
+[local]
+fqdn			= popcorn.gasol.tw
+method			= scp
+incoming		= ~/archive/mini-dinstall/incoming
+allow_unsigned_uploads  = 1
+post_upload_command	= /usr/bin/mini-dinstall -d --batch
+
+[ppa-natty]
+fqdn			= ppa.launchpad.net
+method			= ftp
+incoming		= ~gasol-wu/natty/ubuntu
+login			= anonymous
+
+[ppa-lucid]
+fqdn			= ppa.launchpad.net
+method			= ftp
+incoming		= ~gasol-wu/lucid/ubuntu
+login			= anonymous
