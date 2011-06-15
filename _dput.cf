@@ -4,6 +4,7 @@ method			= scp
 incoming		= ~/archive/mini-dinstall/incoming
 allow_unsigned_uploads  = 1
 post_upload_command	= /usr/bin/mini-dinstall -d --batch
+ssh_config_options	= Port 222
 
 [ppa-natty]
 fqdn			= ppa.launchpad.net
