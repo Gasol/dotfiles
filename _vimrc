@@ -28,6 +28,7 @@ autocmd FileType php set omnifunc=phpcomplete
 autocmd FileType py set omnifunc=pythoncomplete
 autocmd FileType python syntax keyword pythonDecorator True None False self
 autocmd FileType css set omnifunc=csscomplete
+autocmd BufNewFile,BufRead *.go set filetype=go sw=4 ts=4
 autocmd BufNewFile,BufRead *.php set keywordprg="help"
 autocmd BufNewFile,BufRead *.mako so set filetype=mako
 autocmd BufNewFile,BufRead *.gradle so set filetype=groovy
