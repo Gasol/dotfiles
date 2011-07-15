@@ -8,7 +8,7 @@
 	status = auto
 	branch = auto
 [push]
-	default = matching
+	default = current
 [alias]
     cm = commit -a
     st = status
