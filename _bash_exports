@@ -40,8 +40,10 @@ export MAVEN_HOME="$DEV_HOME/apache-maven"
 export ANT_HOME="$DEV_HOME/apache-ant"
 export AWS_IAM_HOME="$DEV_HOME/IAMCli-1.2.0"
 export TITANIUM_HOME="$DEV_HOME/Titanium\\ Developer-1.2.2"
+export GRADLE_HOME="$DEV_HOME/gradle"
+export CLOSURE_HOME="$DEV_HOME/closure"
 
-export PATH="$HOME/bin:$GOROOT/bin:$AWS_IAM_HOME/bin:$ANT_HOME/bin:$PLAY_HOME:$MAVEN_HOME/bin:$APPENGINE_HOME:$PATH"
+export PATH="$HOME/bin:$GOROOT/bin:$GRADLE_HOME/bin:$AWS_IAM_HOME/bin:$ANT_HOME/bin:$PLAY_HOME:$MAVEN_HOME/bin:$APPENGINE_HOME:$PATH"
 
 if [ -e $HOME/.ec2 ]; then
 	export EC2_PRIVATE_KEY="$HOME/.ec2/pk-*.pem"
