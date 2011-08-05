@@ -30,6 +30,7 @@ case $(uname -s) in
 esac
 
 
+export FULLNAME="Gasol Wu"
 export EMAIL="gasol.wu@gmail.com"
 export GOROOT="$DEV_HOME/go"
 export EDITOR="vim"
