@@ -51,8 +51,8 @@ export ELASTIC_MAPREDUCE_HOME="$DEV_HOME/elastic-mapreduce-cli"
 export PATH="$HOME/bin:$GOROOT/bin:$GRADLE_HOME/bin:$ELASTIC_MAPREDUCE_HOME:$AWS_IAM_HOME/bin:$ANT_HOME/bin:$PLAY_HOME:$MAVEN_HOME/bin:$APPENGINE_HOME:$PATH"
 
 if [ -e $HOME/.ec2 ]; then
-	export EC2_PRIVATE_KEY="$HOME/.ec2/pk-*.pem"
-	export EC2_CERT="$HOME/.ec2/cert-*.pem"
+	export EC2_PRIVATE_KEY=`ls $HOME/.ec2/pk-*.pem`
+	export EC2_CERT=`ls $HOME/.ec2/cert-*.pem`
 	export EC2_HOME="$DEV_HOME/ec2-api-tools"
 	export PATH="$EC2_HOME/bin:$PATH"
 fi
