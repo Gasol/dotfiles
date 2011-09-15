@@ -37,6 +37,7 @@ export HGUSER=$FULLNAME
 export DEBFULLNAME=$FULLNAME
 export DEBEMAIL=$EMAIL
 export EDITOR="vim"
+
 export GOROOT="$DEV_HOME/go"
 export APPENGINE_HOME="$DEV_HOME/google_appengine"
 export PLAY_HOME="$DEV_HOME/play"
@@ -46,13 +47,14 @@ export AWS_IAM_HOME="$DEV_HOME/IAMCli-1.2.0"
 export TITANIUM_HOME="$DEV_HOME/Titanium\\ Developer-1.2.2"
 export GRADLE_HOME="$DEV_HOME/gradle"
 export CLOSURE_HOME="$DEV_HOME/closure"
+export WHIRR_HOME="$DEV_HOME/whirr"
 export ELASTIC_MAPREDUCE_HOME="$DEV_HOME/elastic-mapreduce-cli"
 
-export PATH="$HOME/bin:$GOROOT/bin:$GRADLE_HOME/bin:$ELASTIC_MAPREDUCE_HOME:$AWS_IAM_HOME/bin:$ANT_HOME/bin:$PLAY_HOME:$MAVEN_HOME/bin:$APPENGINE_HOME:$PATH"
+export PATH="$HOME/bin:$GOROOT/bin:$GRADLE_HOME/bin:$ELASTIC_MAPREDUCE_HOME:$AWS_IAM_HOME/bin:$ANT_HOME/bin:$PLAY_HOME:$MAVEN_HOME/bin:$WHIRR_HOME/bin:$APPENGINE_HOME:$PATH"
 
 if [ -e $HOME/.ec2 ]; then
-	export EC2_PRIVATE_KEY=`\find $HOME/.ec2 -maxdepth 1 -name 'pk-*.pem'`
-	export EC2_CERT=`\find $HOME/.ec2 -maxdepth 1 -name 'cert-*.pem'`
+	export EC2_PRIVATE_KEY=`\find $HOME/.ec2 -maxdepth 1 -name 'pk-*.pem' 2> /dev/null`
+	export EC2_CERT=`\find $HOME/.ec2 -maxdepth 1 -name 'cert-*.pem' 2> /dev/null`
 	export EC2_HOME="$DEV_HOME/ec2-api-tools"
 	export PATH="$EC2_HOME/bin:$PATH"
 fi
