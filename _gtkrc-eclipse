@@ -1,0 +1,4 @@
+style "eclipse" {
+        font_name = "Droid Sans 9"
+}
+class "GtkWidget" style "eclipse"
