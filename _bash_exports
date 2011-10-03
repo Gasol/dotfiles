@@ -50,8 +50,9 @@ export CLOSURE_HOME="$DEV_HOME/closure"
 export WHIRR_HOME="$DEV_HOME/whirr"
 export ELASTIC_MAPREDUCE_HOME="$DEV_HOME/elastic-mapreduce-cli"
 export AXIS2_HOME="$DEV_HOME/axis2"
+export APPENGINE_JAVA_HOME="$DEV_HOME/appengine-java-sdk"
 
-export PATH="$HOME/bin:$GOROOT/bin:$GRADLE_HOME/bin:$ELASTIC_MAPREDUCE_HOME:$AWS_IAM_HOME/bin:$ANT_HOME/bin:$PLAY_HOME:$MAVEN_HOME/bin:$WHIRR_HOME/bin:$AXIS2_HOME/bin:$APPENGINE_HOME:$PATH"
+export PATH="$HOME/bin:$GOROOT/bin:$GRADLE_HOME/bin:$ELASTIC_MAPREDUCE_HOME:$AWS_IAM_HOME/bin:$ANT_HOME/bin:$PLAY_HOME:$MAVEN_HOME/bin:$WHIRR_HOME/bin:$AXIS2_HOME/bin:$APPENGINE_HOME:$APPENGINE_JAVA_HOME/bin:$PATH"
 
 if [ -e $HOME/.ec2 ]; then
 	export EC2_PRIVATE_KEY=`\find $HOME/.ec2 -maxdepth 1 -name 'pk-*.pem' 2> /dev/null`
