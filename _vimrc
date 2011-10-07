@@ -37,7 +37,7 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 
 map th :tabprev<CR>
 map tl :tabnext<CR>
-
+nnoremap <silent> <F12> :TlistToggle<CR>
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
