@@ -47,3 +47,9 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 let NERDTreeIgnore=['\~$', '\.lo$', '\.la$']
+
+let Tlist_Use_Right_Window = 1
+let os = substitute(system('uname'), "\n", "", "")
+if os == "FreeBSD"
+	let Tlist_Ctags_Cmd = "/usr/local/bin/exctags"
+endif
