@@ -34,6 +34,7 @@ autocmd BufNewFile,BufRead *.mako so set filetype=mako
 autocmd BufNewFile,BufRead *.gradle so set filetype=groovy
 autocmd BufNewFile,BufRead *.thrift if &ft == 'conf' | set filetype=thrift
 autocmd BufNewFile,BufRead *.json set ft=javascript
+autocmd BufNewFile,BufRead *.phpt set ft=php
 
 map th :tabprev<CR>
 map tl :tabnext<CR>
