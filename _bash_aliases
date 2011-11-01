@@ -25,6 +25,7 @@ esac
 alias j="jobs -l"
 alias today="date '+%Y%m%d'"
 alias h='history'
+alias phpunit='phpunit --colors'
 
 # To: chet@ins.CWRU.Edu
 # Subject: Bash functions
