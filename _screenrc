@@ -4,6 +4,7 @@ startup_message off
 defutf8 on
 deflogin on
 autodetach on
+encoding utf8 utf8
 
 attrcolor b ".i"
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
