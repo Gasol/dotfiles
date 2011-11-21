@@ -26,6 +26,7 @@ alias j="jobs -l"
 alias today="date '+%Y%m%d'"
 alias h='history'
 alias phpunit='phpunit --colors'
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # To: chet@ins.CWRU.Edu
 # Subject: Bash functions
