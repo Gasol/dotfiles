@@ -17,7 +17,7 @@ case $(uname -s) in
 		export DEV_HOME="$HOME/Development"
 		export ANDROID_HOME="$DEV_HOME/android-sdk-macosx"
 		export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
-		export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
+		export JAVA_HOME=$(/usr/libexec/java_home)
 		export GREP_OPTIONS='--color=auto --mmap --exclude=*\.swp'
 		if [ -n "$MOST" ]; then export MANPAGER="$MOST -s"; fi
 	;;
