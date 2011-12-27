@@ -35,6 +35,7 @@ autocmd BufNewFile,BufRead *.gradle so set filetype=groovy
 autocmd BufNewFile,BufRead *.thrift if &ft == 'conf' | set filetype=thrift
 autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead *.phpt set ft=php
+autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 map th :tabprev<CR>
 map tl :tabnext<CR>
