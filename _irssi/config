@@ -36,8 +36,15 @@ channels = (
   { name = "#tossug"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#cassandra"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#dot"; chatnet = "debian"; autojoin = "yes"; },
+  { name = "#debian-java"; chatnet = "debian"; autojoin = "yes"; },
+  { name = "#debian-mentors"; chatnet = "debian"; autojoin = "yes"; },
   { name = "#android-dev"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#twjug"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#osxchat"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#ubuntu-tw"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#gcin"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#bsdchat"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#php-tw"; chatnet = "freenode"; autojoin = "yes"; },
 );
 
 aliases = {
