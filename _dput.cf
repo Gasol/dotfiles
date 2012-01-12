@@ -17,3 +17,9 @@ fqdn			= ppa.launchpad.net
 method			= ftp
 incoming		= ~gasol-wu/lucid/ubuntu
 login			= anonymous
+
+[debexpo]
+fqdn 			= mentors.debian.net
+incoming 		= /upload/gasol.wu@gmail.com/7a10f85122bd15776c85802ccc52e947
+method 			= http
+allow_unsigned_uploads 	= 0
