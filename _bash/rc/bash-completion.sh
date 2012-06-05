@@ -7,8 +7,9 @@ if [ $bmajor -gt 3 ] || [ $bmajor -eq 3 -a $bminor -ge 2 ]; then
 	if [ -r /etc/bash_completion ]; then
 		# Source completion code.
 		. /etc/bash_completion
-	fi
-	if [ -r /usr/local/etc/bash_completion ]; then
+	elif [ -f `brew --prefix`/etc/bash_completion ]; then
+		. `brew --prefix`/etc/bash_completion
+	elif [ -r /usr/local/etc/bash_completion ]; then
 		# Source completion code.
 		. /usr/local/etc/bash_completion
 	fi
