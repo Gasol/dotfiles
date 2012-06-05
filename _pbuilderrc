@@ -22,7 +22,7 @@ DEBIAN_SUITES=($UNSTABLE_CODENAME $TESTING_CODENAME $STABLE_CODENAME
 "unstable" "testing" "stable")
 
 # List of Ubuntu suites. Update these when needed.
-UBUNTU_SUITES=("oneiric" "natty" "maverick" "lucid" "karmic" "jaunty" "intrepid" "hardy")
+UBUNTU_SUITES=("precise", "oneiric" "natty" "maverick" "lucid" "karmic" "jaunty" "intrepid" "hardy")
 
 # Mirrors to use. Update these to your preferred mirror.
 DEBIAN_MIRROR="free.nchc.org.tw"
