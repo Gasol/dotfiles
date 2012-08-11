@@ -34,6 +34,27 @@ alias fgrpe='fgrep --color=tty -d skip --mmap'
 alias grep='grep --color=tty -d skip --mmap'
 alias grpe='grep --color=tty -d skip --mmap'
 
+_cd()
+{
+	if [[ -n $1 ]]; then
+		if [[ -L $1 ]]; then
+			[[ "`stat -L $1 -c %F`" != 'directory' ]] && CDIR=`dirname $1`
+		elif [[ ! -d $1 ]]; then
+			CDIR=`dirname $1`
+			[[ "$CDIR" == "." ]] && unset CDIR
+		fi
+	fi
+
+	if [[ -n "$CDIR" ]]; then
+		cd $CDIR
+	else
+		cd $1
+	fi
+	unset CDIR
+}
+
+alias cd="_cd"
+
 # To: chet@ins.CWRU.Edu
 # Subject: Bash functions
 # From: Sandeep Mehta <sxm@philabs.Philips.Com>
