@@ -9,6 +9,11 @@
 	branch = auto
 [push]
 	default = current
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
 [alias]
     cm = commit -a
     st = status
