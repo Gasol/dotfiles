@@ -16,6 +16,10 @@
 	new = green bold
 [alias]
     cm = commit -a
+	ca = commit --amend
+	rb = rebase
+	rbc = rebase --continue
+	rba = rebase --abort
     st = status
     co = checkout
     br = branch
