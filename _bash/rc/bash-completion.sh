@@ -14,6 +14,8 @@ if [ $bmajor -gt 3 ] || [ $bmajor -eq 3 -a $bminor -ge 2 ]; then
 	elif [ -r /usr/local/etc/bash_completion ]; then
 		# Source completion code.
 		. /usr/local/etc/bash_completion
+	elif [ -f /usr/local/share/bash-completion/bash_completion.sh ]; then
+		. /usr/local/share/bash-completion/bash_completion.sh
 	fi
 fi
 unset bash bmajor bminor
