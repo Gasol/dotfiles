@@ -15,7 +15,7 @@
 	old = red bold
 	new = green bold
 [alias]
-    cm = commit -a
+    cm = commit
 	ca = commit --amend
 	rb = rebase
 	rbc = rebase --continue
