@@ -17,6 +17,7 @@
 [alias]
     cm = commit
     ca = commit --amend
+    df = diff
     rb = rebase
     rbc = rebase --continue
     rba = rebase --abort
