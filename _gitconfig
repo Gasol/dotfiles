@@ -1,25 +1,25 @@
 # vim: sw=4 ts=4
 [user]
-	name = Gasol Wu
-	email = gasol.wu@gmail.com
+    name = Gasol Wu
+    email = gasol.wu@gmail.com
 [color]
-	ui = auto
-	diff = auto
-	status = auto
-	branch = auto
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
 [push]
-	default = current
+    default = current
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 [alias]
     cm = commit
-	ca = commit --amend
-	rb = rebase
-	rbc = rebase --continue
-	rba = rebase --abort
+    ca = commit --amend
+    rb = rebase
+    rbc = rebase --continue
+    rba = rebase --abort
     st = status
     co = checkout
     br = branch
