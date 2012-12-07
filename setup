@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 DIFF=`which diff`
 ABSPATH=$(cd ${0%/*} && echo `pwd`/${0##*/})
