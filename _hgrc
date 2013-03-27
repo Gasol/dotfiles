@@ -1,2 +1,4 @@
 [alias]
 latest = log --limit 5
+[extensions]
+purge =
