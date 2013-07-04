@@ -45,7 +45,7 @@ class XLSCat {
 
     def getCellValue(cell) {
         def value = ''
-        switch(cell.getCellType()) {
+        switch(cell?.getCellType()) {
             case Cell.CELL_TYPE_BLANK:
                 break
             case Cell.CELL_TYPE_NUMERIC:
@@ -66,7 +66,9 @@ class XLSCat {
             def wb = WorkbookFactory.create(it)
             def sheet = wb.getSheetAt(sheetIndex?.toInteger())
             for (row in sheet) {
-                for (cell in row) {
+                def lastCellNum = row.lastCellNum
+                for (def cellNum = 0; cellNum < lastCellNum; cellNum++) {
+                    def cell = row.getCell(cellNum)
                     def value = getCellValue(cell)
                     print("$value\t")
                 }
