@@ -1,0 +1,14 @@
+#!/usr/bin/awk -f
+BEGIN {
+	FS="\t"
+}
+{
+	printf "|| "
+	for (i = 1; i <= NF; i++) {
+		printf $i;
+		if (NF != 1) {
+			printf " || ";
+		}
+	}
+	printf "\n";
+}
