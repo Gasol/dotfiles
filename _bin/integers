@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+egrep --color=no -o '[0-9]+'
