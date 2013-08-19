@@ -32,9 +32,20 @@
  */
 
 if (!$rootDir = getenv('PHPUNIT_PATH')) {
-    foreach (array('/usr', '/usr/local') as $prefix) {
-        $systemExecutable = "$prefix/bin/phpunit";
-        if (file_exists($systemExecutable) and include_once $systemExecutable) {
+    $binDirs = array(
+        '/usr/bin',
+        '/usr/local/bin',
+    );
+    $pearBinDir = system('pear config-get bin_dir', $returnVariable);
+    if (0 === $returnVariable) {
+        $binDirs[] = $pearBinDir;
+    }
+    foreach ($binDirs as $binDir) {
+        $systemExecutable = "$binDir/phpunit";
+        if (
+            file_exists($systemExecutable) &&
+            include_once $systemExecutable
+        ) {
             exit(0);
         }
     }
