@@ -34,6 +34,7 @@ alias fgrpe='fgrep --color=always -d skip --mmap'
 alias grep='grep --color=always -d skip --mmap'
 alias grpe='grep --color=always -d skip --mmap'
 alias tmux='tmux -2'
+alias bd=". bd -s"
 
 # To: chet@ins.CWRU.Edu
 # Subject: Bash functions
