@@ -35,6 +35,7 @@ alias grep='grep --color=auto -d skip --mmap'
 alias grpe='grep --color=auto -d skip --mmap'
 alias tmux='tmux -2'
 alias bd=". bd -s"
+alias gti="git"
 
 # To: chet@ins.CWRU.Edu
 # Subject: Bash functions
