@@ -28,7 +28,7 @@ else:
     from io import StringIO
 from pygments import highlight
 from pygments.formatters import TerminalFormatter
-from pygments.lexers import JSONLexer, XmlLexer
+from pygments.lexers.web import JSONLexer, XmlLexer
 import xml.dom.minidom
 import argparse
 
