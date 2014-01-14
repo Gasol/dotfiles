@@ -1,0 +1,3 @@
+
+bind "\e\e[C" em-next-word
+bind "\e\e[D" ed-prev-word
