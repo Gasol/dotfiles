@@ -3,12 +3,7 @@
 TMUX=$(which tmux)
 TMUX_CONFIG=$($TMUX info | grep configuration | grep -oE '/.*$')
 if [ -L $TMUX_CONFIG ]; then
-	TMUX_CONFIG=$(readlink $TMUX_CONFIG)
-fi
-
-if [ "Darwin" = `uname` ]; then
-	TMUX_CONFIG_DIR=$HOME/$(dirname $TMUX_CONFIG)
-else
+	TMUX_CONFIG=$(python -c 'import os,sys; print os.path.realpath(sys.argv[1]);' $TMUX_CONFIG)
 	TMUX_CONFIG_DIR=$(dirname $TMUX_CONFIG)
 fi
 
