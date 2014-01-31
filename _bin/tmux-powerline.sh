@@ -12,5 +12,5 @@ else
 	TMUX_CONFIG_DIR=$(dirname $TMUX_CONFIG)
 fi
 
-$TMUX set-option -g status-left "#($TMUX_CONFIG_DIR/tmux/status-left.sh)"
-$TMUX set-option -g status-right "#($TMUX_CONFIG_DIR/tmux/status-right.sh)"
+$TMUX set-option -g status-left "#($TMUX_CONFIG_DIR/tmux/powerline.sh left)"
+$TMUX set-option -g status-right "#($TMUX_CONFIG_DIR/tmux/powerline.sh right)"
