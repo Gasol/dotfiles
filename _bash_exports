@@ -58,6 +58,7 @@ export JAVAFX_SDK="$DEV_HOME/javafx-sdk"
 export SCALA_HOME="$DEV_HOME/scala"
 export DERBY_HOME="$DEV_HOME/db-derby"
 export MYSQL_PS1="(\u@\h) [\d]> "
+export HISTTIMEFORMAT="%F %T "
 
 export PATH="$HOME/bin:/usr/local/bin:$GOROOT/bin:$GRADLE_HOME/bin:$ELASTIC_MAPREDUCE_HOME:$AWS_IAM_HOME/bin:$ANT_HOME/bin:$PLAY_HOME:$MAVEN_HOME/bin:$WHIRR_HOME/bin:$AXIS2_HOME/bin:$APPENGINE_HOME:$APPENGINE_JAVA_HOME/bin:$JAVAFX_SDK/bin:$SCALA_HOME/bin:$DERBY_HOME/bin:$PATH"
 
