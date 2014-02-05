@@ -13,8 +13,8 @@ PDEBUILD_PBUILDER=cowbuilder
 # Codenames for Debian suites according to their alias. Update these when
 # needed.
 UNSTABLE_CODENAME="sid"
-TESTING_CODENAME="wheezy"
-STABLE_CODENAME="squeeze"
+TESTING_CODENAME="jesse"
+STABLE_CODENAME="wheezy"
 STABLE_BACKPORTS_SUITE="$STABLE_CODENAME-backports"
 
 # List of Debian suites.
