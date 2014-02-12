@@ -25,7 +25,6 @@ case $(uname -s) in
 		if [ -n "$MOST" ]; then export MANPAGER="$MOST -s"; fi
 	;;
 	FreeBSD)
-		export LESS="-eFmrSwX"
 		export DEV_HOME="$HOME/dev"
 		if [ -d /usr/local/openjdk6 ]; then
 			export JAVA_HOME="/usr/local/openjdk6"
@@ -39,6 +38,7 @@ case $(uname -s) in
 esac
 
 
+export LESS="-eFmrSwX"
 export FULLNAME="Gasol Wu"
 export EMAIL="gasol.wu@gmail.com"
 export HGUSER=$FULLNAME
