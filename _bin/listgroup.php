@@ -26,9 +26,9 @@ if (empty($mapname)) {
 $hosts = listgroup($domain, 'netgroup', $mapname);
 echo implode(' ', $hosts) . PHP_EOL;
 
-function listgroup($domain, $key, $mapname) {
+function listgroup($domain, $mapname, $key) {
     $hosts = array();
-    $match_result = yp_match($domain, $key, $mapname);
+    $match_result = yp_match($domain, $mapname, $key);
     if (empty($match_result)) {
         return array();
     }
@@ -51,7 +51,7 @@ function listgroup($domain, $key, $mapname) {
                 $hosts[] = $host;
             }
         } else {
-            $hosts = array_merge($hosts, listgroup($domain, $key, $match_item));
+            $hosts = array_merge($hosts, listgroup($domain, $mapname, $match_item));
         }
     }
 
