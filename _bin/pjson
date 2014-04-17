@@ -32,7 +32,7 @@ from pygments.lexers.web import JSONLexer, XmlLexer
 import xml.dom.minidom
 import argparse
 
-def format_code(data, is_xml=False):
+def format_code(data, is_xml=False, ensure_ascii=True):
     """
     Parses data and formats it
     """
@@ -42,7 +42,7 @@ def format_code(data, is_xml=False):
         obj = json.loads(data)
         output = StringIO()
 
-        json.dump(obj, output, sort_keys=True, indent=2)
+        json.dump(obj, output, sort_keys=True, ensure_ascii = ensure_ascii, indent=2)
         return output.getvalue()
 
 def color_yo_shit(code, lexer):
@@ -58,6 +58,7 @@ def main():
     parser = argparse.ArgumentParser(description="Command-line tool to validate and pretty-print JSON and XML")
     parser.add_argument("-x", action="store_true", help="Data is XML")
     parser.add_argument("-b", action="store_true", help="Read data in chunks")
+    parser.add_argument("-D", action="store_false", help="Don't encode utf-8", default=True)
     args = parser.parse_args()
 
     if args.x and args.b:
@@ -65,12 +66,12 @@ def main():
         exit(1)
     elif args.b:
         for line in sys.stdin:
-            print(color_yo_shit(format_code(line), JSONLexer()))
+            print(color_yo_shit(format_code(line, ensure_ascii = args.D), JSONLexer()))
     else:
         data = sys.stdin.read()
         if sys.stdout.isatty():
             try:
-                data = color_yo_shit(format_code(data, args.x), XmlLexer() if args.x else JSONLexer())
+                data = color_yo_shit(format_code(data, args.x, ensure_ascii = args.D), XmlLexer() if args.x else JSONLexer())
             except ValueError as e:
                 print e
         print(data)
