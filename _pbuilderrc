@@ -4,6 +4,7 @@
 sudo mkdir -p /var/cache/pbuilder/ccache
 sudo chmod a+w /var/cache/pbuilder/ccache
 export CCACHE_DIR="/var/cache/pbuilder/ccache"
+export CCACHEDIR="$CCACHE_DIR"
 export PATH="/usr/lib/ccache:$PATH"
 EXTRAPACKAGES="$EXTRAPACKAGES ccache"
 BINDMOUNTS="$BINDMOUNTS $CCACHE_DIR"
@@ -68,7 +69,7 @@ if [ -n "${ARCH}" ]; then
 	NAME="$NAME-$ARCH"
 	DEBOOTSTRAPOPTS=("--arch" "$ARCH" "${DEBOOTSTRAPOPTS[@]}")
 fi
-# BASETGZ="/var/cache/pbuilder/$NAME-base.tgz"
+BASETGZ="/var/cache/pbuilder/$NAME-base.tgz"
 # Optionally, set BASEPATH (and not BASETGZ) if using cowbuilder
 BASEPATH="/var/cache/pbuilder/$NAME/base.cow/"
 DISTRIBUTION="$DIST"
