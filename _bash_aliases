@@ -22,6 +22,7 @@ case $(uname -s) in
 		;;
 esac
 
+alias cps='composer'
 alias j="jobs -l"
 alias today="date '+%Y%m%d'"
 alias h='history'
