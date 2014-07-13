@@ -1,0 +1,13 @@
+#!/bin/sh -e
+
+readonly PKGID=`pkgutil --pkgs="^$1$" || true`
+if [ -z "$PKGID" ]; then
+	echo "Pkg not found"
+	exit 1
+fi
+
+readonly VOLUME=`pkgutil --pkg-info $PKGID | grep volume | awk -F ':' '{gsub(/^[ \t]+/, "", $2); print $2;}'`
+pkgutil --files $PKGID > /tmp/$PKGID.plist
+pkgutil --only-files --files $PKGID | sort -r | tr '\n' '\0' | xargs -0 -I % rm "$VOLUME/%" || true
+pkgutil --only-dirs --files $PKGID | sort -r | tr '\n' '\0' | xargs -0 -I % rmdir "$VOLUME/%" || true
+pkgutil --forget $PKGID
