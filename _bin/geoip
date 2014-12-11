@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-set_error_handler(function($errno, $errstr, $errfile,  $errline, $errcontext) {
+set_error_handler(function($errno, $errstr) {
     static $geoip_notice_host_not_found = 'geoip_country_code_by_name(): Host 127.0.0.1 not found';
     $boundary = 3;
     $similar_threshold = strlen($geoip_notice_host_not_found) - strlen('255.255.255.255') - $boundary;
