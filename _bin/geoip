@@ -45,7 +45,7 @@ foreach ($streams as $stream) {
 
         $geoip_country = geoip_country_code_by_name($ip_address) ?: $country_not_found;
         $has_ip2location and $ip2loc_country = ip2location_get_country_short($ip_address);
-        if (isset($ip2loc_country) || '-' === $ip2loc_country) {
+        if (!isset($ip2loc_country) || '-' === $ip2loc_country) {
             $ip2loc_country = $country_not_found;
         }
 
