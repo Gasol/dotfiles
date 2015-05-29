@@ -1,0 +1,16 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use feature qw(say);
+use IO::ScalarArray;
+use URI::Escape;
+
+STDOUT->autoflush(1);
+
+my $handle  = -t STDIN ? new IO::ScalarArray \@ARGV : *STDIN;
+
+while (<$handle>) {
+    chomp;
+    say uri_unescape $_;
+}
