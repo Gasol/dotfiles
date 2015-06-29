@@ -1,3 +1,2 @@
-# Act like vim
-bind generic <Ctrl-f> scroll-page-down
-bind generic <Ctrl-b> scroll-page-up
+bind generic ^f scroll-page-down
+bind generic ^b scroll-page-up
