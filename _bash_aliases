@@ -83,4 +83,15 @@ repeat()
 	return $st
 }
 
+datetime()
+{
+	case "$(uname -s)" in
+		(FreeBSD|Darwin)
+			date -r $1 +"%FT%T%z"
+			;;
+		(Linux)
+			date -d "@$1" -Iseconds
+	esac
+}
+
 # end repeat
