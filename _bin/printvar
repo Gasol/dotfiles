@@ -1,0 +1,44 @@
+#!/bin/sh
+#
+# The idea is borrowed from https://blog.melski.net/2010/11/30/makefile-hacks-print-the-value-of-any-variable/
+
+die() {
+    >&2
+    echo $1
+    exit ${2:-255}
+}
+
+SCRIPTDIR="$(cd "$(dirname $0)" && pwd)"
+MAKEFILE_LIST="GNUmakefile BSDmakefile makefile Makefile"
+
+makefile=""
+for file in $MAKEFILE_LIST; do
+    if [ -r $file ]; then
+        makefile=$file
+        break
+    fi
+done
+
+MAKE_CMD=$(which make)
+if [ -z "$MAKE_CMD" ]; then
+    die "Make command is missing" 127
+fi
+
+if $MAKE_CMD -v 2>/dev/null | grep -q GNU; then
+    GNUMAKE=yes
+fi
+
+vars=""
+for val in $@; do
+    if [ -z "$GNUMAKE" ]; then
+        printf "$val="
+        $MAKE_CMD -V $val
+    else
+        vars="$vars print-$val"
+    fi
+done
+
+if [ "xyes" == "x$GNUMAKE" ]; then
+    args=${makefile:+-f $makefile}
+    $MAKE_CMD $args -f $SCRIPTDIR/printvar.mk $vars
+fi
