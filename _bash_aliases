@@ -22,7 +22,7 @@ case $(uname -s) in
 		;;
 esac
 
-alias cps='composer'
+alias cps='php -n -d extension=phar.so -d extension=json.so -d extension=iconv.so -d allow_url_fopen=On `which composer` --ansi'
 alias j="jobs -l"
 alias today="date '+%Y%m%d'"
 alias h='history'
