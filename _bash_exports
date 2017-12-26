@@ -10,7 +10,6 @@ case $(uname -s) in
 		export DEV_HOME="$HOME/dev"
 		export ANDROID_HOME="$DEV_HOME/android-sdk-linux_x86"
 		export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:/var/lib/gems/1.8/bin:$PATH"
-		export GREP_OPTIONS='--color=auto --exclude-dir=\.svn --exclude-dir=\.git --exclude=*\.swp'
 		export APPENGINE_HOME="$DEV_HOME/google_appengine"
 		if [ -n "$MOST" ]; then export MANPAGER="$MOST -s"; fi
 	;;
@@ -20,7 +19,6 @@ case $(uname -s) in
 		export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
 		export JAVA_HOME=$(/usr/libexec/java_home)
 		export APPENGINE_HOME="/usr/local/google_appengine"
-		export GREP_OPTIONS='--color=auto --exclude=*\.swp'
 		export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 		if [ -n "$MOST" ]; then export MANPAGER="$MOST -s"; fi
 	;;
@@ -32,7 +30,6 @@ case $(uname -s) in
 			export JAVA_HOME="/usr/local/openjdk7"
 		fi
 		export APPENGINE_HOME="$DEV_HOME/google_appengine"
-		export GREP_OPTIONS='--color=auto --exclude=*\.swp'
 		if [ -n "$MOST" ]; then alias man="man -P $MOST"; fi
 	;;
 esac
