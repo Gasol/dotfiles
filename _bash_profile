@@ -2,7 +2,7 @@
 # vim: set ft=sh:
 
 SSHAGENT=/usr/bin/ssh-agent
-SSHAGENTARGS="-s"
+SSHAGENTARGS="-s -t 1800"
 if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
     eval `$SSHAGENT $SSHAGENTARGS`
 fi
