@@ -14,8 +14,8 @@ PDEBUILD_PBUILDER=cowbuilder
 # Codenames for Debian suites according to their alias. Update these when
 # needed.
 UNSTABLE_CODENAME="sid"
-TESTING_CODENAME="jesse"
-STABLE_CODENAME="wheezy"
+TESTING_CODENAME="buster"
+STABLE_CODENAME="stretch"
 STABLE_BACKPORTS_SUITE="$STABLE_CODENAME-backports"
 
 # List of Debian suites.
@@ -23,11 +23,13 @@ DEBIAN_SUITES=($UNSTABLE_CODENAME $TESTING_CODENAME $STABLE_CODENAME
 "unstable" "testing" "stable")
 
 # List of Ubuntu suites. Update these when needed.
-UBUNTU_SUITES=("trusty", "precise", "oneiric" "natty" "maverick" "lucid" "karmic" "jaunty" "intrepid" "hardy")
+UBUNTU_SUITES=("yakkety", "xenial", "trusty", "precise", "oneiric" "natty" "maverick" "lucid" "karmic" "jaunty" "intrepid" "hardy")
 
 # Mirrors to use. Update these to your preferred mirror.
 DEBIAN_MIRROR="free.nchc.org.tw"
 UBUNTU_MIRROR="free.nchc.org.tw"
+#DEBIAN_MIRROR="mirrors.linode.com"
+#UBUNTU_MIRROR="mirrors.linode.com"
 
 # Optionally use the changelog of a package to determine the suite to use if
 # none set.
@@ -71,7 +73,7 @@ if [ -n "${ARCH}" ]; then
 fi
 BASETGZ="/var/cache/pbuilder/$NAME-base.tgz"
 # Optionally, set BASEPATH (and not BASETGZ) if using cowbuilder
-BASEPATH="/var/cache/pbuilder/$NAME/base.cow/"
+BASEPATH="/var/cache/pbuilder/base-${NAME}.cow/"
 DISTRIBUTION="$DIST"
 BUILDRESULT="/var/cache/pbuilder/$NAME/result/"
 APTCACHE="/var/cache/pbuilder/$NAME/aptcache/"
@@ -82,6 +84,7 @@ if $(echo ${DEBIAN_SUITES[@]} | grep -q $DIST); then
 	MIRRORSITE="http://$DEBIAN_MIRROR/debian/"
 	COMPONENTS="main contrib non-free"
 	DEBOOTSTRAPOPTS=("${DEBOOTSTRAPOPTS[@]}" "--keyring=/usr/share/keyrings/debian-archive-keyring.gpg")
+	OTHERMIRROR="deb http://$DEBIAN_MIRROR/debian/ $DIST-backports main"
 
 elif $(echo ${UBUNTU_SUITES[@]} | grep -q $DIST); then
 	# Ubuntu configuration
