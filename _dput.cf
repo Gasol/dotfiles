@@ -6,6 +6,24 @@ allow_unsigned_uploads  = 1
 post_upload_command	= /usr/bin/mini-dinstall -d --batch
 ssh_config_options	= Port 222
 
+[ppa-jsonnet]
+fqdn			= ppa.launchpad.net
+method			= ftp
+incoming		= ~gasol-wu/ubuntu/jsonnet/
+login			= anonymous
+
+[ppa-trusty]
+fqdn			= ppa.launchpad.net
+method			= ftp
+incoming		= ~gasol-wu/ubuntu/trusty/
+login			= anonymous
+
+[ppa-xenial]
+fqdn			= ppa.launchpad.net
+method			= ftp
+incoming		= ~gasol-wu/ubuntu/xenial/
+login			= anonymous
+
 [ppa-natty]
 fqdn			= ppa.launchpad.net
 method			= ftp
@@ -16,6 +34,18 @@ login			= anonymous
 fqdn			= ppa.launchpad.net
 method			= ftp
 incoming		= ~gasol-wu/lucid/ubuntu
+login			= anonymous
+
+[ppa-utopic]
+fqdn			= ppa.launchpad.net
+method			= ftp
+incoming		= ~gasol-wu/ubuntu/utopic
+login			= anonymous
+
+[ppa-vivid]
+fqdn			= ppa.launchpad.net
+method			= ftp
+incoming		= ~gasol-wu/ubuntu/vivid
 login			= anonymous
 
 [debexpo]
