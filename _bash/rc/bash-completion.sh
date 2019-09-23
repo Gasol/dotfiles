@@ -7,15 +7,26 @@ if [ $bmajor -gt 3 ] || [ $bmajor -eq 3 -a $bminor -ge 2 ]; then
 	if [ -r /etc/bash_completion ]; then
 		# Source completion code.
 		. /etc/bash_completion
-	elif [ -x /usr/local/bin/brew ]; then
-		if [ -f `brew --prefix`/etc/bash_completion ]; then
-			. `brew --prefix`/etc/bash_completion
-		fi
-	elif [ -r /usr/local/etc/bash_completion ]; then
+	fi
+	if [ -r /usr/local/etc/bash_completion ]; then
 		# Source completion code.
 		. /usr/local/etc/bash_completion
-	elif [ -f /usr/local/share/bash-completion/bash_completion.sh ]; then
-		. /usr/local/share/bash-completion/bash_completion.sh
+	fi
+	if command -v brew >/dev/null; then
+		HOMEBREW_PREFIX=$(brew --prefix)
+		if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
+			source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+		else
+			for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*; do
+				[[ -r "$COMPLETION" ]] && source "$COMPLETION"
+			done
+		fi
+	fi
+	if [ -d /usr/local/share/bash-completion/completions ]; then
+		for f in /usr/local/share/bash-completion/completions/*; do
+			# shellcheck source=/dev/null
+			source "$f"
+		done
 	fi
 fi
 unset bash bmajor bminor
