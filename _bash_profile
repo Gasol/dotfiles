@@ -19,3 +19,6 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$PATH"
 fi
+
+PERLBREW_RC="$HOME/perl5/perlbrew/etc/bashrc"
+[ -f "$PERLBREW_RC" ] && source "$PERLBREW_RC"
