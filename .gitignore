@@ -1,4 +1,5 @@
 bin/stow
+tmux/dot-tmux/plugins/*
 stow/
 *.swp
 _vim/.netrwhist
