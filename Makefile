@@ -38,7 +38,7 @@ bin/stow: $(STOW_DEPS)
 		ln -s "$$source" "$(STOW)"
 
 clean:
-	-rm -rf stow-2.3.1
+	-rm -rf stow-$(STOW_VERSION)
 	-rm $(STOW_TARBALL_FILE)
 
 install: bin/stow
