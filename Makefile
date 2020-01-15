@@ -3,6 +3,8 @@ ROOT_DIR := $(shell dirname "$(realpath $(firstword $(MAKEFILE_LIST)))")
 
 CURL              := $(shell command -v curl)
 STOW              := $(ROOT_DIR)/bin/stow
+STOW_EXCLUDES     := bin scripts
+STOW_LIST         := $(filter-out $(STOW_EXCLUDES),$(patsubst %/,%,$(wildcard */)))
 STOW_VERSION      := 2.3.1
 STOW_TARBALL_FILE := stow-$(STOW_VERSION).tar.gz
 STOW_TARBALL_URL  := https://ftp.gnu.org/gnu/stow/$(STOW_TARBALL_FILE)
@@ -40,5 +42,11 @@ clean:
 	-rm $(STOW_TARBALL_FILE)
 
 install: bin/stow
+	@for f in $(STOW_LIST); do \
+		echo "Stowing $$f..." ; \
+		$(STOW) --dotfiles $$f ; \
+		done
 
-.PHONY: install-stow
+test:
+
+.PHONY: clean install install-stow
