@@ -1,14 +1,14 @@
 
 ROOT_DIR := $(shell dirname "$(realpath $(firstword $(MAKEFILE_LIST)))")
 
-CURL              := $(shell command -v curl)
+CURL              := $(shell which curl)
 STOW              := $(ROOT_DIR)/bin/stow
 STOW_EXCLUDES     := bin scripts
 STOW_LIST         := $(filter-out $(STOW_EXCLUDES),$(patsubst %/,%,$(wildcard */)))
 STOW_VERSION      := 2.3.1
 STOW_TARBALL_FILE := stow-$(STOW_VERSION).tar.gz
 STOW_TARBALL_URL  := https://ftp.gnu.org/gnu/stow/$(STOW_TARBALL_FILE)
-SYSTEM_STOW       := $(shell command -v stow)
+SYSTEM_STOW       := $(shell which stow)
 ifeq ($(SYSTEM_STOW), )
     STOW_DEPS := stow
 endif
@@ -28,13 +28,12 @@ stow: stow-$(STOW_VERSION)
 bin:
 	mkdir -p $@
 
-bin/stow: $(STOW_DEPS)
+bin/stow: bin $(STOW_DEPS)
 	@if [ -n "$(SYSTEM_STOW)" ]; then \
 			source="$(SYSTEM_STOW)" ; \
 		else \
 			source="$(ROOT_DIR)/stow/bin/stow" ; \
 		fi ; \
-		echo $$source $(STOW) ; \
 		ln -s "$$source" "$(STOW)"
 
 clean:

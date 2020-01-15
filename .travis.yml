@@ -1,0 +1,13 @@
+language: perl
+dist: bionic
+
+before_install:
+  - cpanm --sudo Test::Output
+  - sudo apt-get install -y curl
+
+install: make install
+
+before_script: ls -al ../
+script:
+  - pwd
+  - test -L ../.bash_profile
