@@ -1,4 +1,7 @@
 bin/stow
+config/dot-config/*
+!config/dot-config/nvim/
+!config/dot-config/powerline/
 tmux/dot-tmux/plugins/*
 stow/
 *.swp
