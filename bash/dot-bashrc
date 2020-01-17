@@ -60,8 +60,6 @@ function load_rcfile {
     fi
 }
 
-load_rcfile ~/.bash/rc.os/`uname -s`
-load_rcfile ~/.bash/rc.host/$HOSTNAME
 load_rcfile ~/.bash/rc
-load_rcfile ~/.bash/misc
+
 export BASH_SILENCE_DEPRECATION_WARNING=1
