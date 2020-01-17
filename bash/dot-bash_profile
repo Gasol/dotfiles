@@ -9,10 +9,5 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$PATH"
-fi
-
 PERLBREW_RC="$HOME/perl5/perlbrew/etc/bashrc"
 [ -f "$PERLBREW_RC" ] && source "$PERLBREW_RC"
