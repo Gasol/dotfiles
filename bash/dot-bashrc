@@ -10,6 +10,7 @@ shopt -s histappend
 HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=1073741824
 HISTFILESIZE=1073741824
+HISTTIMEFORMAT="%F %T "
 
 shopt -s checkwinsize
 shopt -s cmdhist

@@ -44,7 +44,6 @@ export DEBEMAIL=$EMAIL
 export EDITOR="vim"
 
 export MYSQL_PS1="(\u@\h) [\d]> "
-export HISTTIMEFORMAT="%F %T "
 
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
