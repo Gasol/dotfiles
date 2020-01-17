@@ -1,5 +1,17 @@
 #!/bin/bash
 
+keychain=$(type -p keychain)
+if [ -n "$keychain" ]; then
+	keychain_args="--timeout 60"
+	case $(uname -s) in
+		Darwin)
+			keychain_args="$keychain_args --inherit any"
+			;;
+	esac
+	eval $($keychain $keychain_args)
+	. ~/.keychain/$HOSTNAME-sh
+fi
+
 function load_rcfile {
     if [ -d $1 ]; then
         for content in `\ls $1`; do
