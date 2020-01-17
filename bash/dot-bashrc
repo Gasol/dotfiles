@@ -1,4 +1,4 @@
-#!/bin/bash
+# vim: ft=sh
 
 keychain=$(type -p keychain)
 if [ -n "$keychain" ]; then
