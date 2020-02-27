@@ -34,7 +34,8 @@ bin/stow: bin $(STOW_DEPS)
 		else \
 			source="$(ROOT_DIR)/stow/bin/stow" ; \
 		fi ; \
-		ln -s "$$source" "$(STOW)"
+		ln -s "$$source" "$(STOW)" \
+		touch "$$source"
 
 clean:
 	-rm -rf stow-$(STOW_VERSION)
