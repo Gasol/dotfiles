@@ -3,7 +3,7 @@ config/dot-config/*
 !config/dot-config/nvim/
 !config/dot-config/powerline/
 tmux/dot-tmux/plugins/*
-stow/
+stow*
 *.swp
 _vim/.netrwhist
 _irssi/startup
