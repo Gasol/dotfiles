@@ -8,16 +8,13 @@ case $(uname -s) in
 	Linux)
 		export JAVA_HOME="/usr/lib/jvm/java-6-sun"
 		export DEV_HOME="$HOME/dev"
-		export ANDROID_HOME="$DEV_HOME/android-sdk-linux_x86"
-		export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:/var/lib/gems/1.8/bin:$PATH"
+		export PATH="/var/lib/gems/1.8/bin:$PATH"
 		export APPENGINE_HOME="$DEV_HOME/google_appengine"
 		if [ -n "$MOST" ]; then export MANPAGER="$MOST -s"; fi
 	;;
 	Darwin)
 		export DEV_HOME="$HOME/Development"
-		export ANDROID_HOME="$DEV_HOME/android-sdk-macosx"
-		export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
-		export JAVA_HOME=$(/usr/libexec/java_home)
+		export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 		export APPENGINE_HOME="/usr/local/google_appengine"
 		export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 		if [ -n "$MOST" ]; then export MANPAGER="$MOST -s"; fi
