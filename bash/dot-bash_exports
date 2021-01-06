@@ -31,6 +31,20 @@ case $(uname -s) in
 	;;
 esac
 
+if [ -z "$TERM" ]; then
+	case "$TERM_PROGRAM" in
+		iTerm.app)
+			if [ "${TERM_PROGRAM_VERSION%%.*}" -eq 3 ]; then
+				export TERM=iterm2
+			else
+				export TERM=iterm
+			fi
+			;;
+		Apple_Terminal)
+			export TERM=nsterm
+			;;
+	esac
+fi
 
 export LESS="-eFmrSwX"
 export FULLNAME="Gasol Wu"
