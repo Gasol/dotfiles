@@ -46,7 +46,7 @@ if [ -z "$TERM" ]; then
 	esac
 fi
 
-export LESS="-eFmrSwX"
+export LESS="-eFmrSwX --mouse --wheel-lines=3"
 export FULLNAME="Gasol Wu"
 export EMAIL="gasol.wu@gmail.com"
 export HGUSER=$FULLNAME
