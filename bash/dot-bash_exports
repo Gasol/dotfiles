@@ -14,7 +14,7 @@ case $(uname -s) in
 	;;
 	Darwin)
 		export DEV_HOME="$HOME/Development"
-		export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+		export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 		export APPENGINE_HOME="/usr/local/google_appengine"
 		export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 		if [ -n "$MOST" ]; then export MANPAGER="$MOST -s"; fi
