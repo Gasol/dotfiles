@@ -1,4 +1,6 @@
 
 bind "\e\e[C" em-next-word
 bind "\e\e[D" ed-prev-word
+bind "\e[\eOC" em-next-word
+bind "\e[\eOD" ed-prev-word
 bind "^W" ed-delete-prev-word

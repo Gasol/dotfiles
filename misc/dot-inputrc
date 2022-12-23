@@ -23,5 +23,7 @@ $if mode=emacs
 "\e[5D": backward-word
 "\e\e[C": forward-word
 "\e\e[D": backward-word
+"\e\eOC": forward-word
+"\e\eOD": backward-word
 
 $endif
