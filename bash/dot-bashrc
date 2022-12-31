@@ -63,3 +63,9 @@ function load_rcfile {
 load_rcfile ~/.bash/rc
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
+export ATUIN_NOBIND=1
+if `command -v atuin > /dev/null`; then
+		eval "$(atuin init bash)"
+		bind -x '"\C-r": __atuin_history'
+fi
+eval "$(atuin init bash)"
