@@ -38,6 +38,10 @@ alias tmux='tmux -2'
 alias bd=". bd -s"
 alias gti="git"
 
+if `command -v bat >/dev/null 2>&1`; then
+	alias cat="bat"
+fi
+
 # To: chet@ins.CWRU.Edu
 # Subject: Bash functions
 # From: Sandeep Mehta <sxm@philabs.Philips.Com>
