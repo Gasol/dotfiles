@@ -68,4 +68,3 @@ if `command -v atuin > /dev/null`; then
 		eval "$(atuin init bash)"
 		bind -x '"\C-r": __atuin_history'
 fi
-eval "$(atuin init bash)"
