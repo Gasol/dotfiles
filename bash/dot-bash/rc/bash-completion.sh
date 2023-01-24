@@ -22,11 +22,5 @@ if [ $bmajor -gt 3 ] || [ $bmajor -eq 3 -a $bminor -ge 2 ]; then
 			done
 		fi
 	fi
-	if [ -d /usr/local/share/bash-completion/completions ]; then
-		for f in /usr/local/share/bash-completion/completions/*; do
-			# shellcheck source=/dev/null
-			source "$f"
-		done
-	fi
 fi
 unset bash bmajor bminor
