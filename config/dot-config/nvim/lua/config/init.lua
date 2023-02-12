@@ -15,6 +15,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.colorscheme" },
     { import = "lazyvim.plugins.util" },
     { import = "lazyvim.plugins.editor" },
+    { import = "lazyvim.plugins.coding" },
     { import = "lazyvim.plugins.ui" },
     { import = "plugins" },
     { "akinsho/bufferline.nvim", enabled = false },
