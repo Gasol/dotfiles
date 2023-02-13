@@ -9,4 +9,7 @@ return {
       vim.keymap.set("n", "<leader>tg", "<cmd>TestVisit<cr>")
     end,
   },
+  {
+    "tpope/vim-scriptease",
+  },
 }
