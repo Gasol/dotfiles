@@ -50,6 +50,9 @@ return {
     "jeffkreeftmeijer/vim-numbertoggle",
   },
   {
+    "michaeljsmith/vim-indent-object",
+  },
+  {
     "zbirenbaum/copilot.lua",
     name = "copilot",
     cmd = "Copilot",
