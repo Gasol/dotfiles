@@ -15,4 +15,15 @@ return {
   {
     "tpope/vim-dispatch",
   },
+  {
+    "tpope/vim-unimpaired", -- complementary pairs of mappings
+  },
+  {
+    "zbirenbaum/copilot.lua",
+    name = "copilot",
+    cmd = "Copilot",
+    lazy = true,
+    event = { "InsertEnter" },
+    config = true,
+  },
 }
