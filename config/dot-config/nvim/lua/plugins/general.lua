@@ -62,6 +62,9 @@ return {
     "tpope/vim-obsession",
   },
   {
+    "tpope/vim-rsi",
+  },
+  {
     "editorconfig/editorconfig-vim",
     lazy = true,
     event = "InsertEnter",
