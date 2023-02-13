@@ -141,6 +141,10 @@ return {
           -- nls.builtins.formatting.prettierd,
           nls.builtins.formatting.stylua,
           nls.builtins.diagnostics.flake8,
+          nls.builtins.diagnostics.php,
+          nls.builtins.diagnostics.phpcs.with({
+            extra_args = { "--standard", "PSR12" },
+          }),
         },
       }
     end,
