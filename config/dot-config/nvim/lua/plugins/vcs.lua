@@ -8,4 +8,7 @@ return {
       { "<leader>G", "<cmd>G<cr>", { silent = true } },
     },
   },
+  {
+    "tpope/vim-rhubarb",
+  },
 }
