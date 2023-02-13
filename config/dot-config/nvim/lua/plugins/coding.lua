@@ -20,4 +20,7 @@ return {
       vim.keymap.set("n", "J", "<Plug>(jplus)")
     end,
   },
+  {
+    "yasuhiroki/github-actions-yaml.vim",
+  },
 }
