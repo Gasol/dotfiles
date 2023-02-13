@@ -65,6 +65,28 @@ return {
     "tpope/vim-rsi",
   },
   {
+    "rhysd/vim-grammarous",
+    lazy = true,
+    config = function()
+      vim.g["vim-grammarous#default_comments_only_filetypes"] = {
+        ["*"] = 1,
+        help = 0,
+        markdown = 0,
+        gitcommit = 0,
+      }
+      vim.g["grammarous#hooks"] = {
+        on_check = function(_)
+          vim.keymap.set("n", "<c-n>", "<Plug>(grammarous-move-to-next-error)", { buffer = true })
+          vim.keymap.set("n", "<c-p>", "<Plug>(grammarous-move-to-previous-error)", { buffer = true })
+        end,
+        on_reset = function(_)
+          vim.keymap.del("n", "<c-n>", { buffer = true })
+          vim.keymap.del("n", "<c-p>", { buffer = true })
+        end,
+      }
+    end,
+  },
+  {
     "editorconfig/editorconfig-vim",
     lazy = true,
     event = "InsertEnter",
