@@ -13,6 +13,7 @@ return {
         end,
       },
     },
+    ---@class PluginLspOpts
     opts = {
       -- options for vim.diagnostic.config()
       diagnostics = {
@@ -64,6 +65,7 @@ return {
         -- ["*"] = function(server, opts) end,
       },
     },
+    ---@param opts PluginLspOpts
     config = function(plugin, opts)
       -- setup autoformat
       require("lazyvim.plugins.lsp.format").autoformat = opts.autoformat
@@ -98,6 +100,14 @@ return {
           end
         end
         require("lspconfig")[server].setup(server_opts)
+      end
+
+      -- temp fix for lspconfig rename
+      -- https://github.com/neovim/nvim-lspconfig/pull/2439
+      local mappings = require("mason-lspconfig.mappings.server")
+      if not mappings.lspconfig_to_package.lua_ls then
+        mappings.lspconfig_to_package.lua_ls = "lua-language-server"
+        mappings.package_to_lspconfig["lua-language-server"] = "lua_ls"
       end
 
       local mlsp = require("mason-lspconfig")
@@ -148,6 +158,7 @@ return {
         "flake8",
       },
     },
+    ---@param opts MasonSettings | {ensure_installed: string[]}
     config = function(plugin, opts)
       require("mason").setup(opts)
       local mr = require("mason-registry")
