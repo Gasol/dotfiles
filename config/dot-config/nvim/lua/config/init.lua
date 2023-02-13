@@ -44,3 +44,20 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "gitcommit",
   command = "hi link @text.diff.delete diffRemoved",
 })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "help",
+  callback = function()
+    vim.keymap.set("n", "<cr>", "<c-]>", { buffer = true })
+    vim.keymap.set("n", "<bs>", "<c-T>", { buffer = true })
+    vim.keymap.set("n", "q", "<cmd>quit<cr>", { buffer = true })
+    vim.cmd([[
+    if has('vertsplit')
+      let s:ratio = &co / str2float(&lines)
+      let s:display_landscape = s:ratio > 2.74
+      if s:display_landscape
+        wincmd L
+      endif
+    endif
+    ]])
+  end,
+})
