@@ -73,6 +73,7 @@ return {
       require("lazyvim.util").on_attach(function(client, buffer)
         require("lazyvim.plugins.lsp.format").on_attach(client, buffer)
         require("lazyvim.plugins.lsp.keymaps").on_attach(client, buffer)
+        vim.keymap.del("n", "gt", { buffer = buffer })
       end)
 
       -- diagnostics
