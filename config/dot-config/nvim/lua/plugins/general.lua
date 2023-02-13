@@ -135,4 +135,8 @@ return {
   {
     "rafi/awesome-vim-colorschemes",
   },
+  {
+    "chrisbra/sudoedit.vim",
+    cmd = "SudoWrite",
+  },
 }
