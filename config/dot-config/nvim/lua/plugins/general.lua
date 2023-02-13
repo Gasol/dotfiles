@@ -120,7 +120,15 @@ return {
     cmd = "Copilot",
     lazy = true,
     event = { "InsertEnter" },
-    config = true,
+    opts = {
+      pane = {
+        auto_refresh = true,
+      },
+      suggestion = {
+        auto_trigger = true,
+      },
+      node = "/usr/local/bin/node",
+    },
   },
   {
     "wakatime/vim-wakatime",
