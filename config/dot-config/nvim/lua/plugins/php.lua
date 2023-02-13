@@ -1,0 +1,5 @@
+return {
+  {
+    "rayburgemeestre/phpfolding.vim",
+  },
+}
