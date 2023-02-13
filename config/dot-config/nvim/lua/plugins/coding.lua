@@ -12,4 +12,12 @@ return {
   {
     "tpope/vim-scriptease",
   },
+  {
+    "osyo-manga/vim-jplus",
+    lazy = true,
+    keys = "J",
+    config = function()
+      vim.keymap.set("n", "J", "<Plug>(jplus)")
+    end,
+  },
 }
