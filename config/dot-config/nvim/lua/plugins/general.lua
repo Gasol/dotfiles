@@ -19,6 +19,9 @@ return {
     "tpope/vim-unimpaired", -- complementary pairs of mappings
   },
   {
+    "tpope/vim-characterize", -- unicode metadata lookup
+  },
+  {
     "zbirenbaum/copilot.lua",
     name = "copilot",
     cmd = "Copilot",
