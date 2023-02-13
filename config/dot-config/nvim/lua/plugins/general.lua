@@ -59,6 +59,9 @@ return {
     "tpope/vim-surround",
   },
   {
+    "tpope/vim-obsession",
+  },
+  {
     "editorconfig/editorconfig-vim",
     lazy = true,
     event = "InsertEnter",
