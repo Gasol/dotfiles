@@ -56,6 +56,9 @@ return {
     "tpope/vim-sensible",
   },
   {
+    "tpope/vim-surround",
+  },
+  {
     "editorconfig/editorconfig-vim",
     lazy = true,
     event = "InsertEnter",

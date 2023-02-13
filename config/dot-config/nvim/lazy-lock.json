@@ -65,6 +65,7 @@
   "vim-scriptease": { "branch": "master", "commit": "18511d389675d773994215ddb572ccdc2b72f52b" },
   "vim-sensible": { "branch": "master", "commit": "16283468becaa6985839f96fea212f8634fbd7d2" },
   "vim-startuptime": { "branch": "master", "commit": "6580cf539c33a212f4f5542068a3b4dd2b3ad834" },
+  "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "vim-test": { "branch": "master", "commit": "048f15403d9edfa513a50fafd7b107306c5512e4" },
   "vim-unimpaired": { "branch": "master", "commit": "6d44a6dc2ec34607c41ec78acf81657248580bf1" },
   "which-key.nvim": { "branch": "main", "commit": "5224c261825263f46f6771f1b644cae33cd06995" }
