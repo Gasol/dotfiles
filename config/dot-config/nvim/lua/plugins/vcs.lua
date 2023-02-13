@@ -20,4 +20,9 @@ return {
     filetype = { "gitcommit" },
     cmd = "GBrowse",
   },
+  {
+    "sodapopcan/vim-twiggy",
+    lazy = true,
+    cmd = "Twiggy",
+  },
 }

@@ -74,6 +74,7 @@
   "vim-startuptime": { "branch": "master", "commit": "6580cf539c33a212f4f5542068a3b4dd2b3ad834" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "vim-test": { "branch": "master", "commit": "048f15403d9edfa513a50fafd7b107306c5512e4" },
+  "vim-twiggy": { "branch": "master", "commit": "7a2161991722a811c4ff06b3ce0119dd180729fd" },
   "vim-unimpaired": { "branch": "master", "commit": "6d44a6dc2ec34607c41ec78acf81657248580bf1" },
   "vim-wakatime": { "branch": "master", "commit": "ee4ab57adf62a309aeef383a2da23b6e48e5ae50" },
   "which-key.nvim": { "branch": "main", "commit": "5224c261825263f46f6771f1b644cae33cd06995" }
