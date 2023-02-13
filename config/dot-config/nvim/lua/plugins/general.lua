@@ -132,4 +132,7 @@ return {
     end,
     priority = 1000,
   },
+  {
+    "rafi/awesome-vim-colorschemes",
+  },
 }

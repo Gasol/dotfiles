@@ -4,6 +4,7 @@
   "accelerated-jk.nvim": { "branch": "main", "commit": "38bbbf9258aab876906588ea979901ed3ed569c6" },
   "alpha-nvim": { "branch": "main", "commit": "1c903fd40b1d51e7740b4d90e9f18e83f2916586" },
   "asyncrun.vim": { "branch": "master", "commit": "bd240b2a2ac5c975216744fda57abe5ff8f39957" },
+  "awesome-vim-colorschemes": { "branch": "master", "commit": "9f96bbdef5cb19daf58449f0fbb597af6fc4c2eb" },
   "catppuccin": { "branch": "main", "commit": "a5f3ed5d3b1d9ea21183718a8a89a6653bd6ea48" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "0e6b2ed705ddcff9738ec4ea838141654f12eeef" },
