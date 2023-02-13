@@ -53,6 +53,14 @@ return {
     "michaeljsmith/vim-indent-object",
   },
   {
+    "skywind3000/asyncrun.vim",
+    lazy = true,
+    cmd = "AsyncRun",
+    config = function()
+      vim.g.asyncrun_open = 8
+    end,
+  },
+  {
     "zbirenbaum/copilot.lua",
     name = "copilot",
     cmd = "Copilot",
