@@ -45,6 +45,9 @@ return {
     end,
   },
   {
+    "jeffkreeftmeijer/vim-numbertoggle",
+  },
+  {
     "zbirenbaum/copilot.lua",
     name = "copilot",
     cmd = "Copilot",
