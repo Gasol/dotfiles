@@ -53,6 +53,9 @@ return {
     "tpope/vim-repeat",
   },
   {
+    "tpope/vim-sensible",
+  },
+  {
     "editorconfig/editorconfig-vim",
     lazy = true,
     event = "InsertEnter",
