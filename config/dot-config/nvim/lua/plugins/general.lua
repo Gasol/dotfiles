@@ -31,6 +31,20 @@ return {
     end,
   },
   {
+    "editorconfig/editorconfig-vim",
+    lazy = true,
+    event = "InsertEnter",
+    config = function()
+      vim.g.EditorConfig_exclude_patterns = { "fugitive://.*", "scp://.*" }
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "gitcommit" },
+        callback = function()
+          vim.g.EditorConfig_disable = 1
+        end,
+      })
+    end,
+  },
+  {
     "zbirenbaum/copilot.lua",
     name = "copilot",
     cmd = "Copilot",
