@@ -1,4 +1,5 @@
 require("config.lazy")
+require("config.options")
 require("lazy").setup({
   spec = {
     {
@@ -11,7 +12,6 @@ require("lazy").setup({
         },
       },
     },
-    { import = "lazyvim.plugins.core" },
     { import = "lazyvim.plugins.colorscheme" },
     { import = "lazyvim.plugins.util" },
     { import = "lazyvim.plugins.editor" },
