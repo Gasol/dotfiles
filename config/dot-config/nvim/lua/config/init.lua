@@ -33,3 +33,6 @@ require("lazy").setup({
     },
   },
 })
+vim.api.nvim_create_autocmd("TextYankPost", {
+  command = "lua vim.highlight.on_yank { higroup='IncSearch', timeout=500 }",
+})
