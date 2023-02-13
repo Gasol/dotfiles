@@ -125,4 +125,11 @@ return {
   {
     "wakatime/vim-wakatime",
   },
+  {
+    "embear/vim-localvimrc",
+    init = function()
+      vim.g.localvimrc_persistent = 1
+    end,
+    priority = 1000,
+  },
 }
