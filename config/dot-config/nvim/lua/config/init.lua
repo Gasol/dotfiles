@@ -36,3 +36,11 @@ require("lazy").setup({
 vim.api.nvim_create_autocmd("TextYankPost", {
   command = "lua vim.highlight.on_yank { higroup='IncSearch', timeout=500 }",
 })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "gitcommit",
+  command = "hi link @text.diff.add diffAdded",
+})
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "gitcommit",
+  command = "hi link @text.diff.delete diffRemoved",
+})
