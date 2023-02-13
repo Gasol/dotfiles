@@ -33,6 +33,23 @@ return {
     end,
   },
   {
+    "tpope/vim-projectionist",
+    config = function()
+      vim.g.projectionist_heuristics = {
+        ["tests/&phpunit.xml|phpunit.xml.dist"] = {
+          ["src/*.php"] = {
+            alternate = "tests/{}Test.php",
+            type = "source",
+          },
+          ["tests/*Test.php"] = {
+            alternate = "src/{}.php",
+            type = "test",
+          },
+        },
+      }
+    end,
+  },
+  {
     "editorconfig/editorconfig-vim",
     lazy = true,
     event = "InsertEnter",
