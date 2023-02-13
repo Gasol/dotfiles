@@ -122,4 +122,7 @@ return {
     event = { "InsertEnter" },
     config = true,
   },
+  {
+    "wakatime/vim-wakatime",
+  },
 }
