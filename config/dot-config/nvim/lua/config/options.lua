@@ -22,6 +22,7 @@ set.smartcase = true
 set.smartindent = true
 set.timeoutlen = 500
 set.wildmode = { "longest:full", "full" }
+set.winminheight = 3
 vim.cmd("hi PmenuSel blend=0")
 if vim.fn.executable("rg") == 1 then
   set.grepprg = "rg --vimgrep --no-heading --hidden --glob '!.git'"
