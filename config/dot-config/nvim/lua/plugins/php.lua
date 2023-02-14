@@ -2,7 +2,7 @@ return {
   {
     "rayburgemeestre/phpfolding.vim",
     lazy = true,
-    filetype = "php",
+    ft = "php",
   },
   {
     "haginaga/vim-compiler-phpunit",
@@ -10,6 +10,6 @@ return {
       { "vim-test/vim-test" },
     },
     lazy = true,
-    filetype = "php",
+    ft = "php",
   },
 }

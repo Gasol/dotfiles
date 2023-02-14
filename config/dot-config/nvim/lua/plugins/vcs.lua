@@ -11,13 +11,13 @@ return {
   {
     "tpope/vim-rhubarb",
     lazy = true,
-    filetype = { "gitcommit" },
+    ft = { "gitcommit" },
     cmd = "GBrowse",
   },
   {
     "shumphrey/fugitive-gitlab.vim",
     lazy = true,
-    filetype = { "gitcommit" },
+    ft = { "gitcommit" },
     cmd = "GBrowse",
   },
   {
