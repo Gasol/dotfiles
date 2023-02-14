@@ -22,6 +22,7 @@ set.smartcase = true
 set.smartindent = true
 set.timeoutlen = 500
 set.wildmode = { "longest:full", "full" }
+set.winheight = 3
 set.winminheight = 3
 set.updatetime = 1000
 vim.cmd("hi PmenuSel blend=0")
