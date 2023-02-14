@@ -18,6 +18,8 @@ set.inccommand = "nosplit"
 set.cursorline = true
 set.showmode = false
 set.sidescrolloff = 8
+set.smartcase = true
+set.smartindent = true
 vim.cmd("hi PmenuSel blend=0")
 if vim.fn.executable("rg") == 1 then
   set.grepprg = "rg --vimgrep --no-heading --hidden --glob '!.git'"
