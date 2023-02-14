@@ -144,10 +144,23 @@ return {
     priority = 1000,
   },
   {
-    "rafi/awesome-vim-colorschemes",
-  },
-  {
     "chrisbra/sudoedit.vim",
     cmd = "SudoWrite",
+  },
+  {
+    "ellisonleao/gruvbox.nvim",
+  },
+  {
+    "folke/styler.nvim",
+    dependencies = {
+      "ellisonleao/gruvbox.nvim",
+    },
+    config = function()
+      require("styler").setup({
+        themes = {
+          fugitive = { colorscheme = "gruvbox" },
+        },
+      })
+    end,
   },
 }
