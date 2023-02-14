@@ -15,3 +15,7 @@ opt.scrolloff = 4
 opt.shortmess:append("c")
 opt.pumblend = 15
 vim.cmd("hi PmenuSel blend=0")
+if vim.fn.executable("rg") == 1 then
+  opt.grepprg = "rg --vimgrep --no-heading --hidden --glob '!.git'"
+  opt.grepformat = "%f:%l:%c:%m"
+end
