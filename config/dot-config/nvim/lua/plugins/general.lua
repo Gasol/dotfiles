@@ -10,6 +10,9 @@ return {
     "ntpeters/vim-better-whitespace",
   },
   {
+    "tpope/vim-sleuth",
+  },
+  {
     "tpope/vim-commentary",
     lazy = true,
     keys = "gc",
