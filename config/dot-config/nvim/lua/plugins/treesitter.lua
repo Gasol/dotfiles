@@ -16,6 +16,7 @@ return {
       ensure_installed = {
         "bash",
         "css",
+        "diff",
         "git_rebase",
         "gitcommit",
         "gitignore",
@@ -24,6 +25,7 @@ return {
         "javascript",
         "json",
         "lua",
+        "make",
         "markdown",
         "markdown_inline",
         "php",
