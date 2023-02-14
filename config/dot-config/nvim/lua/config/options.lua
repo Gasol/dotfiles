@@ -14,6 +14,7 @@ set.updatetime = 300
 set.scrolloff = 4
 set.shortmess:append("c")
 set.pumblend = 15
+set.inccommand = "nosplit"
 vim.cmd("hi PmenuSel blend=0")
 if vim.fn.executable("rg") == 1 then
   set.grepprg = "rg --vimgrep --no-heading --hidden --glob '!.git'"
