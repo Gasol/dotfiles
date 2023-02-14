@@ -26,4 +26,24 @@ return {
   {
     "AndrewRadev/tagalong.vim",
   },
+  {
+    "akinsho/toggleterm.nvim",
+    opts = {
+      open_mapping = [[<F24>]], -- Meta + F12
+    },
+  },
+  {
+    "sopa0/telescope-makefile",
+    cond = function()
+      return vim.fn.findfile("Makefile", ".;") ~= ""
+    end,
+    dependencies = {
+      "telescope.nvim",
+      "akinsho/toggleterm.nvim",
+    },
+    config = function()
+      require("telescope-makefile").setup({})
+      require("telescope").load_extension("make")
+    end,
+  },
 }
