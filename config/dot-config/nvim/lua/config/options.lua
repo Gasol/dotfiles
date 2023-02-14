@@ -20,6 +20,7 @@ set.showmode = false
 set.sidescrolloff = 8
 set.smartcase = true
 set.smartindent = true
+set.timeoutlen = 500
 vim.cmd("hi PmenuSel blend=0")
 if vim.fn.executable("rg") == 1 then
   set.grepprg = "rg --vimgrep --no-heading --hidden --glob '!.git'"
