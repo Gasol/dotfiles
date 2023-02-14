@@ -147,6 +147,11 @@ return {
     "chrisbra/sudoedit.vim",
     cmd = "SudoWrite",
   },
+  { "catppuccin/nvim", name = "catppuccin", opts = {
+    dim_inactive = {
+      enabled = true,
+    },
+  } },
   {
     "ellisonleao/gruvbox.nvim",
   },
