@@ -52,7 +52,6 @@
   "styler.nvim": { "branch": "main", "commit": "17c202aaa938f9887fa71373f41f179f6dd94f37" },
   "sudoedit.vim": { "branch": "master", "commit": "e0ffcda0c2f98bec80cb52d1af5f3af26bd38821" },
   "tagalong.vim": { "branch": "main", "commit": "7b8cf57d8b5cbf5ece29e8198e72e8db39d9fe26" },
-  "telescope-makefile": { "branch": "master", "commit": "6e5b5767751dbf73ad4f126840dcf1abfc38e891" },
   "telescope.nvim": { "branch": "master", "commit": "203bf5609137600d73e8ed82703d6b0e320a5f36" },
   "todo-comments.nvim": { "branch": "main", "commit": "74c7d28cb50b0713c881ef69bcb6cdd77d8907d1" },
   "toggleterm.nvim": { "branch": "main", "commit": "19aad0f41f47affbba1274f05e3c067e6d718e1e" },
