@@ -44,6 +44,7 @@
   "nvim-treesitter-textobjects": { "branch": "master", "commit": "15d9c62cb04079cf440ceb6882f2cbfaed66eda1" },
   "nvim-ts-context-commentstring": { "branch": "main", "commit": "a0f89563ba36b3bacd62cf967b46beb4c2c29e52" },
   "nvim-web-devicons": { "branch": "master", "commit": "bb6d4fd1e010300510172b173ab5205d37af084f" },
+  "nvim-window-picker": { "branch": "main", "commit": "5902827d0e338890a22849e2f18dc80d1cc1a8db" },
   "persistence.nvim": { "branch": "main", "commit": "d8a3eda0e19b4d5f3180fc832c25baab1709f2a1" },
   "phpfolding.vim": { "branch": "master", "commit": "0d8c8ea69101bdefb104e3f78cb32c6183e65ddf" },
   "playground": { "branch": "master", "commit": "c481c660fa903a0e295902b1765ecfbd6e76a556" },
