@@ -56,9 +56,6 @@ return {
     "tpope/vim-repeat",
   },
   {
-    "tpope/vim-sensible",
-  },
-  {
     "tpope/vim-surround",
   },
   {
