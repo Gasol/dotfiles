@@ -42,4 +42,3 @@ vim.api.nvim_create_autocmd("FileType", {
   command = "hi link @text.diff.delete diffRemoved",
 })
 vim.cmd.colorscheme("tokyonight-night")
-vim.cmd("highlight CopilotSuggestion guifg=#c9a3d6 ctermfg=8")

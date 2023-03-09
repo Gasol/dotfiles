@@ -129,6 +129,10 @@ return {
       },
       node = "/usr/local/bin/node",
     },
+    config = function(_, opts)
+      require("copilot").setup(opts)
+      vim.cmd("highlight CopilotSuggestion guifg=#c9a3d6 ctermfg=8")
+    end,
   },
   {
     "wakatime/vim-wakatime",
