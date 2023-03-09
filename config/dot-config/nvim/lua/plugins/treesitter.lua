@@ -91,6 +91,14 @@ return {
     ---@param opts TSConfig
     config = function(_, opts)
       require("nvim-treesitter.configs").setup(opts)
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "gitcommit", "diff" },
+        command = "hi link @text.diff.add diffAdded",
+      })
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "gitcommit", "diff" },
+        command = "hi link @text.diff.delete diffRemoved",
+      })
     end,
   },
   {
