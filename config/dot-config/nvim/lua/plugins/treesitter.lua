@@ -105,5 +105,11 @@ return {
     "nvim-treesitter/playground",
     cmd = "TSPlaygroundToggle",
   },
-  { "nvim-treesitter/nvim-treesitter-context", event = "BufReadPost" },
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    event = "BufReadPost",
+    config = function()
+      require("treesitter-context").setup()
+    end,
+  },
 }
