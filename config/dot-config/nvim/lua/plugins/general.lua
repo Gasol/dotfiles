@@ -217,4 +217,7 @@ return {
       end, { desc = "Pick a window" })
     end,
   },
+  {
+    "tzachar/local-highlight.nvim",
+  },
 }
