@@ -236,4 +236,11 @@ return {
       })
     end,
   },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreview", "MarkdownPreviewToggle" },
+    build = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+  },
 }
