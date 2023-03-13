@@ -221,22 +221,6 @@ return {
     "tzachar/local-highlight.nvim",
   },
   {
-    "preservim/vim-markdown",
-    ft = "markdown",
-    dependencies = {
-      "godlygeek/tabular",
-    },
-    config = function()
-      vim.g.vim_markdown_strikethrough = 1
-      vim.api.nvim_create_autocmd({ "BufEnter" }, {
-        pattern = { "*.md" },
-        callback = function()
-          vim.opt_local.conceallevel = 2
-        end,
-      })
-    end,
-  },
-  {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreview", "MarkdownPreviewToggle" },
     build = function()
