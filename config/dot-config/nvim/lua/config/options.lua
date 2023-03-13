@@ -30,3 +30,9 @@ if vim.fn.executable("rg") == 1 then
   set.grepprg = "rg --vimgrep --no-heading --hidden --glob '!.git'"
   set.grepformat = "%f:%l:%c:%m"
 end
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = { "*.md" },
+  callback = function()
+    vim.opt_local.conceallevel = 2
+  end,
+})
