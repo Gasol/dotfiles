@@ -32,4 +32,8 @@ return {
       open_mapping = [[<F24>]], -- Meta + F12
     },
   },
+  {
+    "tpope/vim-rails",
+    ft = "ruby",
+  },
 }
