@@ -31,3 +31,5 @@
 	excludesfile = ~/.gitignore
 [init]
 	defaultBranch = main
+[pull]
+	rebase = false
