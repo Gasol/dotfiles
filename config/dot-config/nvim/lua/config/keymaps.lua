@@ -29,5 +29,6 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+map("n", "<leader>uf", require("lazyvim.plugins.lsp.format").toggle, { desc = "Toggle format on Save" })
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
 map("n", "Q", "<nop>")
