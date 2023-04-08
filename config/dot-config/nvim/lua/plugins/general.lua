@@ -87,15 +87,17 @@ return {
     end,
   },
   {
-    "editorconfig/editorconfig-vim",
+    "gpanders/editorconfig.nvim",
     lazy = true,
     event = "InsertEnter",
+    enabled = function()
+      return not vim.fn.has('nvim-0.9')
+    end,
     config = function()
-      vim.g.EditorConfig_exclude_patterns = { "fugitive://.*", "scp://.*" }
       vim.api.nvim_create_autocmd("FileType", {
-        pattern = { "gitcommit" },
+        pattern = { "gitcommit", "fugitive" },
         callback = function()
-          vim.g.EditorConfig_disable = 1
+          vim.b.editorconfig = false
         end,
       })
     end,

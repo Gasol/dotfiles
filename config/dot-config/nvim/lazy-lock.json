@@ -11,7 +11,7 @@
   "cmp_luasnip": { "branch": "master", "commit": "18095520391186d634a0045dacaa346291096566" },
   "copilot": { "branch": "master", "commit": "f0b41fb89ef2ed7ab4e8cd5208a30755aa638fc4" },
   "dressing.nvim": { "branch": "master", "commit": "c705b3890779ea05bd910e9d06af8a209bfb6ad8" },
-  "editorconfig-vim": { "branch": "master", "commit": "7f4e4dfc58c480d154116614e616d90aac77204d" },
+  "editorconfig.nvim": { "branch": "master", "commit": "5b9e303e1d6f7abfe616ce4cc8d3fffc554790bf" },
   "flit.nvim": { "branch": "main", "commit": "f60e4b3d49bb5a5e97cfffe66f2e671eb422078e" },
   "friendly-snippets": { "branch": "main", "commit": "8d91ba2dc2421a54981115f61b914974f938fa77" },
   "fugitive-gitlab.vim": { "branch": "master", "commit": "b73a8e97de95d26280082abb7f51465a3d3b239e" },
