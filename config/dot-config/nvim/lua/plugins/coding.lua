@@ -35,5 +35,9 @@ return {
   {
     "tpope/vim-rails",
     ft = "ruby",
+    config = function()
+      vim.keymap.set("n", "<leader>r", "<cmd>Rails<cr>")
+      vim.keymap.set("n", "<leader>R", "<cmd>Rails")
+    end,
   },
 }
