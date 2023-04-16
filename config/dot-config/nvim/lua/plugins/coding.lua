@@ -37,7 +37,7 @@ return {
     ft = "ruby",
     config = function()
       vim.keymap.set("n", "<leader>r", "<cmd>Rails<cr>")
-      vim.keymap.set("n", "<leader>R", "<cmd>Rails")
+      vim.keymap.set("n", "<leader>R", ":Rails<space>")
     end,
   },
 }
