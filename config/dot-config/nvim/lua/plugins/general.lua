@@ -20,7 +20,7 @@ return {
   {
     "tpope/vim-dispatch",
     lazy = true,
-    cmd = { "Make", "Dispatch" },
+    cmd = { "Make", "Dispatch", "Start" },
   },
   {
     "tpope/vim-unimpaired", -- complementary pairs of mappings
