@@ -123,6 +123,10 @@ return {
     lazy = true,
     event = { "InsertEnter" },
     opts = {
+      filetypes = {
+        yaml = true,
+        gitcommit = true,
+      },
       pane = {
         auto_refresh = true,
       },
