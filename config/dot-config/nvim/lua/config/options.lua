@@ -25,6 +25,10 @@ set.wildmode = { "longest:full", "full" }
 set.winheight = 3
 set.winminheight = 3
 set.updatetime = 1000
+set.foldmethod = "expr"
+set.foldexpr = "nvim_treesitter#foldexpr()"
+set.foldenable = false
+
 vim.cmd("hi PmenuSel blend=0")
 if vim.fn.executable("rg") == 1 then
   set.grepprg = "rg --vimgrep --no-heading --hidden --glob '!.git'"
