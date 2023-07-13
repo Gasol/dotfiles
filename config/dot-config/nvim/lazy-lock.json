@@ -12,7 +12,7 @@
   "copilot": { "branch": "master", "commit": "e48bd7020a98be217d85c006a298656294fd6210" },
   "dressing.nvim": { "branch": "master", "commit": "e6eff7a5a950a853c3903d906dbcea03f778db5f" },
   "flit.nvim": { "branch": "main", "commit": "2b95df1793f82398ce813ecaa6ca51b10605ff09" },
-  "friendly-snippets": { "branch": "main", "commit": "ca668b7a4a2913ad1109b5e4aaf0013651956b13" },
+  "friendly-snippets": { "branch": "main", "commit": "6153166d5a3dcc7e2809ea4f17f9edb34d026026" },
   "fugitive-gitlab.vim": { "branch": "master", "commit": "55fed481c0309b3405dd3d72921d687bf36873a8" },
   "github-actions-yaml.vim": { "branch": "master", "commit": "f2f16243447cea174daa6b4a9ffd3ff9213814ef" },
   "gitsigns.nvim": { "branch": "main", "commit": "48c3ae8ec74cb83f9570ceb0c5ab8217db7a2220" },
