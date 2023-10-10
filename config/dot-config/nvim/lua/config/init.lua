@@ -12,7 +12,7 @@ require("lazy").setup({
         },
       },
     },
-    { import = "lazyvim.plugins.core" },
+    { import = "lazyvim.plugins" },
     { import = "lazyvim.plugins.colorscheme" },
     { import = "lazyvim.plugins.util" },
     { import = "lazyvim.plugins.editor" },
