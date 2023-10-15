@@ -40,3 +40,14 @@ vim.api.nvim_create_autocmd("BufEnter", {
     vim.opt_local.conceallevel = 2
   end,
 })
+vim.g.better_whitespace_filetypes_blacklist = {
+  "dashboard",
+  "diff",
+  "git",
+  "gitcommit",
+  "unite",
+  "qf",
+  "help",
+  "markdown",
+  "fugitive",
+}
