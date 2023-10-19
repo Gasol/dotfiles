@@ -28,6 +28,7 @@ set.updatetime = 1000
 set.foldmethod = "expr"
 set.foldexpr = "nvim_treesitter#foldexpr()"
 set.foldenable = false
+set.formatexpr = ""
 
 vim.cmd("hi PmenuSel blend=0")
 if vim.fn.executable("rg") == 1 then
