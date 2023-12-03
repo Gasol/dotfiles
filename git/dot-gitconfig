@@ -33,3 +33,5 @@
 	defaultBranch = main
 [pull]
 	rebase = false
+[merge]
+	tool = nvimdiff
