@@ -88,6 +88,6 @@
   "vim-test": { "branch": "master", "commit": "c83d5dffa054ac4663aea1eb7374f638b0462510" },
   "vim-twiggy": { "branch": "master", "commit": "7a2161991722a811c4ff06b3ce0119dd180729fd" },
   "vim-unimpaired": { "branch": "master", "commit": "6d44a6dc2ec34607c41ec78acf81657248580bf1" },
-  "vim-wakatime": { "branch": "master", "commit": "8c8856327815a077cbebeba8c7456312a3d2c39c" },
+  "vim-wakatime": { "branch": "master", "commit": "cae21a19c3db4d9aadd5d320de3da0c99dfd0f62" },
   "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" }
 }
