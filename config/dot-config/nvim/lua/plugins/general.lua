@@ -97,7 +97,7 @@ return {
     lazy = true,
     event = "InsertEnter",
     enabled = function()
-      return not vim.fn.has('nvim-0.9')
+      return not vim.fn.has("nvim-0.9")
     end,
     config = function()
       vim.api.nvim_create_autocmd("FileType", {
