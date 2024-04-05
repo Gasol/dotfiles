@@ -49,6 +49,12 @@ return {
             type = "test",
           },
         },
+        ["test/factories"] = {
+          ["test/factories/*.rb"] = {
+            type = "factory",
+            alternate = "app/models/{}.rb",
+          },
+        },
       }
     end,
   },
