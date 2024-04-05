@@ -237,6 +237,7 @@ return {
     cmd = { "MarkdownPreview", "MarkdownPreviewToggle" },
     build = function()
       vim.fn["mkdp#util#install"]()
+      vim.cmd("highlight @text.strike cterm=strikethrough")
     end,
   },
 }
