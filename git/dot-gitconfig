@@ -35,3 +35,5 @@
 	rebase = false
 [merge]
 	tool = nvimdiff
+[rerere]
+	enabled = true
