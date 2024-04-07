@@ -20,6 +20,13 @@ require("lazy").setup({
     { import = "lazyvim.plugins.ui" },
     { import = "plugins" },
     { "akinsho/bufferline.nvim", enabled = false },
+    {
+      "echasnovski/mini.comment",
+      enabled = function()
+        local has_commenting, _ = pcall(require, "vim._comment")
+        return not has_commenting
+      end,
+    },
   },
   defaults = {
     version = false,

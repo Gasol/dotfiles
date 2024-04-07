@@ -13,11 +13,6 @@ return {
     "tpope/vim-sleuth",
   },
   {
-    "tpope/vim-commentary",
-    lazy = true,
-    keys = "gc",
-  },
-  {
     "tpope/vim-dispatch",
     lazy = true,
     cmd = { "Make", "Dispatch", "Start" },
