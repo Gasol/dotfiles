@@ -66,7 +66,7 @@
   "vim-characterize": { "branch": "master", "commit": "7fc5b75e7a9e46676cf736b56d99dd32004ff3d6" },
   "vim-compiler-phpunit": { "branch": "master", "commit": "6aa51ae1765e51a1713c5120fd0083337cdeb302" },
   "vim-dispatch": { "branch": "master", "commit": "4c695bc052cad2ae6b980aebbe48d046466e27ae" },
-  "vim-fugitive": { "branch": "master", "commit": "ce882460cf3db12e99f8bf579cbf99e331f6dd4f" },
+  "vim-fugitive": { "branch": "master", "commit": "ed9e21fb9bdbda7989c1c9190ca830d36a5df4e2" },
   "vim-git": { "branch": "master", "commit": "105fd5559bd9df3f1204ecdcac2a587614e1a4be" },
   "vim-grammarous": { "branch": "master", "commit": "db46357465ce587d5325e816235b5e92415f8c05" },
   "vim-illuminate": { "branch": "master", "commit": "e522e0dd742a83506db0a72e1ced68c9c130f185" },
