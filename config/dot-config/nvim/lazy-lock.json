@@ -1,5 +1,5 @@
 {
-  "LazyVim": { "branch": "main", "commit": "a72baa8295eaff59d7b891bcb30126be0b5659c6" },
+  "LazyVim": { "branch": "main", "commit": "50626e30925909450bbfe934d1a50e1d34d007c7" },
   "SchemaStore.nvim": { "branch": "main", "commit": "de73a884679a2461c53f96035894ef073a5a7f4f" },
   "accelerated-jk.nvim": { "branch": "main", "commit": "8fb5dad4ccc1811766cebf16b544038aeeb7806f" },
   "asyncrun.vim": { "branch": "master", "commit": "4261fa97f4a5429ec4bf5cfeaba74159c7e74f12" },
@@ -47,7 +47,7 @@
   "persistence.nvim": { "branch": "main", "commit": "5fe077056c821aab41f87650bd6e1c48cd7dd047" },
   "phpfolding.vim": { "branch": "master", "commit": "0d8c8ea69101bdefb104e3f78cb32c6183e65ddf" },
   "playground": { "branch": "master", "commit": "ba48c6a62a280eefb7c85725b0915e021a1a0749" },
-  "plenary.nvim": { "branch": "master", "commit": "b5c8de02a44ffeabff678090edd6a132ff8ab77d" },
+  "plenary.nvim": { "branch": "master", "commit": "a3e3bc82a3f95c5ed0d7201546d5d2c19b20d683" },
   "styler.nvim": { "branch": "main", "commit": "2cd29996d08cec8b31270c6de64465f716ef9d71" },
   "sudoedit.vim": { "branch": "master", "commit": "1fb3238d376a0a90bb699ac105798e61124c980f" },
   "tagalong.vim": { "branch": "main", "commit": "5a2bbf2b1d5b657685a49d48d98a4aa921c1fde3" },
