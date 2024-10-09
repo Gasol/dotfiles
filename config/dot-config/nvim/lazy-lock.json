@@ -16,7 +16,7 @@
   "fugitive-gitlab.vim": { "branch": "master", "commit": "838d3a110836f511be099002ce1a71493c042615" },
   "github-actions-yaml.vim": { "branch": "master", "commit": "728374ef59b11a5f5991ea2560d149a4ae33fd22" },
   "gitsigns.nvim": { "branch": "main", "commit": "863903631e676b33e8be2acb17512fdc1b80b4fb" },
-  "grug-far.nvim": { "branch": "main", "commit": "4e7e61d9a777ee11550ff396080abe295fcc98fe" },
+  "grug-far.nvim": { "branch": "main", "commit": "d3b6a0f83730d6d1c7c37e0acc014cca0b005ab2" },
   "gruvbox.nvim": { "branch": "main", "commit": "49d9c0b150ba70efcd831ec7b3cb8ee740067045" },
   "indent-blankline.nvim": { "branch": "master", "commit": "e7a4442e055ec953311e77791546238d1eaae507" },
   "lazy.nvim": { "branch": "main", "commit": "077102c5bfc578693f12377846d427f49bc50076" },
