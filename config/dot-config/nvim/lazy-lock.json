@@ -1,6 +1,6 @@
 {
   "LazyVim": { "branch": "main", "commit": "13a4a84e3485a36e64055365665a45dc82b6bf71" },
-  "SchemaStore.nvim": { "branch": "main", "commit": "3c1db9e0fdb648c0dd6663ed11c6b261bfed22eb" },
+  "SchemaStore.nvim": { "branch": "main", "commit": "3e54f4bbebea598646b141aa8aeca8a01b6ba601" },
   "accelerated-jk.nvim": { "branch": "main", "commit": "8fb5dad4ccc1811766cebf16b544038aeeb7806f" },
   "asyncrun.vim": { "branch": "master", "commit": "09b8117fe607941c0abff39b194074e40a3dee88" },
   "catppuccin": { "branch": "main", "commit": "ea02cc8c3c053c6c1c574e0791d743338e3e788f" },
@@ -35,7 +35,7 @@
   "neodev.nvim": { "branch": "main", "commit": "46aa467dca16cf3dfe27098042402066d2ae242d" },
   "noice.nvim": { "branch": "main", "commit": "df448c649ef6bc5a6a633a44f2ad0ed8d4442499" },
   "nui.nvim": { "branch": "main", "commit": "b58e2bfda5cea347c9d58b7f11cf3012c7b3953f" },
-  "nvim-cmp": { "branch": "main", "commit": "88661b7cbff086a43b3a3d173b09d0f753d7391d" },
+  "nvim-cmp": { "branch": "main", "commit": "29fb4854573355792df9e156cb779f0d31308796" },
   "nvim-lint": { "branch": "master", "commit": "16b21a7d04d06661f92f273a0744fd81fb19e09e" },
   "nvim-lspconfig": { "branch": "master", "commit": "84f867753f659bfd9319f75bd5eb273a315f2da5" },
   "nvim-notify": { "branch": "master", "commit": "fbef5d32be8466dd76544a257d3f3dce20082a07" },
