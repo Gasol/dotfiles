@@ -42,6 +42,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
   end,
 })
 vim.g.better_whitespace_filetypes_blacklist = {
+  "snacks_dashboard",
   "dashboard",
   "diff",
   "git",
