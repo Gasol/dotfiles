@@ -1,0 +1,15 @@
+set real_name='Gasol Wu'
+set editor='nvim'
+set folder=~/Mail
+set mbox_type=mbox
+set charset="utf-8"
+set sort=threads
+set sort_aux=last-date-received
+set move=no
+set status_format=" %r %f [%n messages - %s/%t new]"
+
+color index brightyellow default ~N
+color index green default ~O
+color status brightwhite blue
+color index brightblue default "~p"
+color index brightgreen default "~F"
