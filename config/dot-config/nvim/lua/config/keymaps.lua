@@ -101,8 +101,13 @@ if vim.fn.executable("lazygit") == 1 then
 end
 
 -- floating terminal
-local lazyterm = function() Util.terminal(nil, { cwd = Util.root() }) end
-map("n", "<leader>ft", lazyterm, { desc = "Terminal (root dir)" })
-map("n", "<leader>fT", function() Util.terminal() end, { desc = "Terminal (cwd)" })
+map("n", "<leader>fT", function() Snacks.terminal() end, { desc = "Terminal (cwd)" })
+map("n", "<leader>ft", function() Snacks.terminal(nil, { cwd = LazyVim.root() }) end, { desc = "Terminal (Root Dir)" })
+map("n", "<c-/>",      function() Snacks.terminal(nil, { cwd = LazyVim.root() }) end, { desc = "Terminal (Root Dir)" })
+map("n", "<c-_>",      function() Snacks.terminal(nil, { cwd = LazyVim.root() }) end, { desc = "which_key_ignore" })
+
+-- Terminal Mappings
+map("t", "<C-/>", "<cmd>close<cr>", { desc = "Hide Terminal" })
+map("t", "<c-_>", "<cmd>close<cr>", { desc = "which_key_ignore" })
 
 map("n", "Q", "<nop>")
