@@ -21,7 +21,7 @@ require("lazy").setup({
     { import = "plugins" },
     { "akinsho/bufferline.nvim", enabled = false },
     {
-      "echasnovski/mini.comment",
+      "nvim-mini/mini.comment",
       enabled = function()
         local has_commenting, _ = pcall(require, "vim._comment")
         return not has_commenting
