@@ -50,7 +50,7 @@
   "vim-fugitive": { "branch": "master", "commit": "61b51c09b7c9ce04e821f6cf76ea4f6f903e3cf4" },
   "vim-git": { "branch": "master", "commit": "485e38f29494e46a9998100e707c755d114155f1" },
   "vim-jplus": { "branch": "master", "commit": "6aaa729f4afeccf430eb3077034d362f5034aa10" },
-  "vim-localvimrc": { "branch": "master", "commit": "841a0645272a485564b8739df91c81bcc03da899" },
+  "vim-localvimrc": { "branch": "main", "commit": "b249c5a6bf324b0d5e62ccacfffcd36c6a703d84" },
   "vim-numbertoggle": { "branch": "main", "commit": "075b7478777e694fbac330ee34a74590dad0fee1" },
   "vim-obsession": { "branch": "master", "commit": "ed9dfc7c2cc917ace8b24f4f9f80a91e05614b63" },
   "vim-projectionist": { "branch": "master", "commit": "5ff7bf79a6ef741036d2038a226bcb5f8b1cd296" },
