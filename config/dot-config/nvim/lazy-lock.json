@@ -9,7 +9,7 @@
   "catppuccin": { "branch": "main", "commit": "0a5de4da015a175f416d6ef1eda84661623e0500" },
   "claude-commit.nvim": { "branch": "master", "commit": "664087c7849d249257388b93195157d2a3d1b5b0" },
   "conform.nvim": { "branch": "master", "commit": "e969e302bced7ffb9a0a0323629f31feb0ca35a6" },
-  "copilot.lua": { "branch": "master", "commit": "27177dd95fc4bea9b34e97c6bd25c61d436a9bd7" },
+  "copilot.lua": { "branch": "master", "commit": "ef4bfc579b404c531c1738bacca82ed61501d877" },
   "flash.nvim": { "branch": "main", "commit": "fcea7ff883235d9024dc41e638f164a450c14ca2" },
   "friendly-snippets": { "branch": "main", "commit": "6cd7280adead7f586db6fccbd15d2cac7e2188b9" },
   "fugitive-gitlab.vim": { "branch": "master", "commit": "3584cf7e607ba7822f991d407a8d780e05aae287" },
@@ -61,6 +61,6 @@
   "vim-scriptease": { "branch": "master", "commit": "4cc639dd70061bb1489f4d3655861ebd9bc896fa" },
   "vim-sleuth": { "branch": "master", "commit": "be69bff86754b1aa5adcbb527d7fcd1635a84080" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
-  "vim-test": { "branch": "master", "commit": "f881edb21e7a092f5793687d058c257dddb961d3" },
+  "vim-test": { "branch": "master", "commit": "931c6cfdd3069df52c4486b25200e4b10d0595c8" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" }
 }
