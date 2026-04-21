@@ -6,7 +6,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 local set = vim.opt
-set.guifont = "Menlo-Regular:h14"
+set.guifont = "Menlo:h14"
 set.number = true
 set.relativenumber = true
 set.shiftwidth = 4
