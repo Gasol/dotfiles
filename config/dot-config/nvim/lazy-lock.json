@@ -1,7 +1,7 @@
 {
   "CopilotChat.nvim": { "branch": "main", "commit": "004ced055d8db59561cfcddc5f141ccd8d5a033b" },
   "LazyVim": { "branch": "main", "commit": "c10948c50b18fae7f256433afdef09e432410480" },
-  "SchemaStore.nvim": { "branch": "main", "commit": "2940d5e12f8797620cd47dca984d46119e1fa4b8" },
+  "SchemaStore.nvim": { "branch": "main", "commit": "d34c58439271f5e73ed79c2b8d1a09731c4525f1" },
   "accelerated-jk.nvim": { "branch": "main", "commit": "8fb5dad4ccc1811766cebf16b544038aeeb7806f" },
   "blink-copilot": { "branch": "main", "commit": "7ad8209b2f880a2840c94cdcd80ab4dc511d4f39" },
   "blink.cmp": { "branch": "main", "commit": "78336bc89ee5365633bcf754d93df01678b5c08f" },
@@ -32,7 +32,7 @@
   "nvim-highlight-colors": { "branch": "main", "commit": "e4c7af0211866162d999ce0bdd6a029302e19139" },
   "nvim-lint": { "branch": "master", "commit": "3d55c8f67c6ae5c15e1042571e107c7a3d5c5f4e" },
   "nvim-lspconfig": { "branch": "master", "commit": "16286347bdba1333c7d124d9de9fe6630731b2b2" },
-  "nvim-treesitter": { "branch": "main", "commit": "857651fce37eba032ebe28f3a206283cdc65c45a" },
+  "nvim-treesitter": { "branch": "main", "commit": "427e9222363d07c32d6db6169e4049c28d58d141" },
   "nvim-treesitter-context": { "branch": "master", "commit": "f3061339b8eaf9fda873600bc425b8d2d8502533" },
   "nvim-treesitter-textobjects": { "branch": "main", "commit": "898ee307df58f854d11cd7edd06472574d48014e" },
   "nvim-ts-autotag": { "branch": "main", "commit": "88c1453db4ba7dd24131086fe51fdf74e587d275" },
