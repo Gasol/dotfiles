@@ -48,6 +48,7 @@ fi
 
 function load_rcfile {
 	if [ -d $1 ]; then
+		# shellcheck disable=SC2045
 		for content in $(\ls $1); do
 			if [ -d $1 ]; then
 				load_rcfile $1/$content
@@ -64,7 +65,7 @@ load_rcfile ~/.bash/rc
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export ATUIN_NOBIND=1
-if $(command -v atuin >/dev/null); then
+if command -v atuin >/dev/null; then
 	eval "$(atuin init bash)"
 	bind -x '"\C-r": __atuin_history'
 fi
