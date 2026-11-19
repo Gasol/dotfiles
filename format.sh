@@ -43,6 +43,9 @@ owned() {
 
 # Shell that shfmt and shellcheck understand. zsh scripts are skipped.
 is_shell() {
+	if head -n 1 "$1" | grep -q zsh; then
+		return 1
+	fi
 	case $1 in
 	*.sh | bash/dot-bash*) return 0 ;;
 	esac
