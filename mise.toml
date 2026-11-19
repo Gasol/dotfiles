@@ -1,0 +1,6 @@
+# Tools for `make lint` and `make fmt`. Install with `mise install`.
+[tools]
+shfmt = "3.14.1"
+shellcheck = "0.11.0"
+stylua = "2.6.0"
+editorconfig-checker = "4.0.2"
