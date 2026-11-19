@@ -31,9 +31,7 @@
     who = shortlog -s --
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 [core]
-    pager = delta
-    #pager = hunk pager
-	excludesfile = /Users/gasolwu/.gitignore
+	excludesfile = ~/.gitignore
 [init]
 	defaultBranch = main
 [pull]
@@ -45,16 +43,6 @@
 	enabled = true
 [log]
     excludeDecoration = refs/branchless/*
-[interactive]
-    diffFilter = delta --color-only
-[delta]
-    navigate = true  # use n and N to move between diff sections
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [blame]
     #ignoreRevsFile = .git-blame-ignore-revs
 [diff]
@@ -69,8 +57,12 @@
 	process = git-lfs filter-process
 	required = true
 [credential "https://github.com"]
-	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
+	helper =
+	helper = !gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
+	helper =
+	helper = !gh auth git-credential
+# Per-machine settings (pager, GUI diff tools) live in an untracked file.
+# A missing file is ignored. See README.
+[include]
+	path = ~/.gitconfig.local
