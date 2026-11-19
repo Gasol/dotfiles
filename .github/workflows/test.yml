@@ -1,0 +1,25 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  # No stow on the runner, so bootstrap-stow.sh downloads, verifies and builds 2.4.1.
+  build-stow:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - run: make test
+
+  # Debian 13 ships stow 2.4.1, so bootstrap-stow.sh uses the system one.
+  system-stow:
+    runs-on: ubuntu-24.04
+    container: debian:13
+    steps:
+      - run: apt-get update && apt-get install -y make git perl curl stow
+      - uses: actions/checkout@v7
+      - run: make test
