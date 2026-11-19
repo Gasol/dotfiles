@@ -42,6 +42,13 @@ for f in .bashrc .gitconfig .gitignore; do
 done
 pass "dot- files are linked, including .gitignore (default ignore list)"
 
+[ -L "$TARGET/.tmux.conf" ] || fail ".tmux.conf is not a symlink"
+[ ! -e "$TARGET/.tmux" ] || fail "$TARGET/.tmux exists; plugins would land in the repo"
+pin=$(sed -n 's/^PIN=//p' install-tpm.sh)
+tpm=$TARGET/.local/share/tmux/plugins/tpm
+[ "$(git -C "$tpm" rev-parse HEAD)" = "$pin" ] || fail "tpm is not at the pinned commit $pin"
+pass "tmux conf is linked and tpm sits outside the repo at the pinned commit"
+
 mkdir -p "$TARGET/.config/runtime-app"
 echo data >"$TARGET/.config/runtime-app/state"
 [ ! -e "$repo/config/dot-config/runtime-app" ] || fail "app data under .config reached the repo"

@@ -11,6 +11,7 @@ PACKAGES = bash config git irssi misc scripts tmux vcs
 install:
 	@mkdir -p $(TARGET)/.config $(TARGET)/bin
 	@STOW=$$(sh ./bootstrap-stow.sh) && $$STOW -t $(TARGET) $(PACKAGES)
+	@TARGET=$(TARGET) sh ./install-tpm.sh
 	@if [ "$(TARGET)" = "$$HOME" ]; then $(MAKE) macos; fi
 
 uninstall:
