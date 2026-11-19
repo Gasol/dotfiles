@@ -2,8 +2,8 @@
 
 # If not running interactively, don't do anything
 case $- in
-	*i*) ;;
-	*) return;;
+*i*) ;;
+*) return ;;
 esac
 
 shopt -s histappend
@@ -19,52 +19,58 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
 	debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;28m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " (\[\e[32;1m\]%s\[\e[0m\])") \$ '
+#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;28m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " (\[\e[32;1m\]%s\[\e[0m\])") \$ '
 
 keychain=$(type -p keychain)
 
 if [ -n "$keychain" ]; then
 	keychain_args="--quiet --timeout 60"
 	case $(uname -s) in
-		Darwin)
-			keychain_args="$keychain_args --inherit any"
-			;;
+	Darwin)
+		keychain_args="$keychain_args --inherit any"
+		;;
 	esac
 	eval $($keychain $keychain_args)
 	. ~/.keychain/$HOSTNAME-sh
 fi
 
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+	. ~/.bash_aliases
 fi
 
 if [ -f ~/.bash_exports ]; then
-    . ~/.bash_exports
+	. ~/.bash_exports
 fi
 
 if [ -f ~/.bash_local ]; then
-    . ~/.bash_local
+	. ~/.bash_local
 fi
 
 function load_rcfile {
-    if [ -d $1 ]; then
-        for content in `\ls $1`; do
-            if [ -d $1 ]; then
-                load_rcfile $1/$content
-            elif [ -f $1 ]; then
-                source $1/$content
-            fi
-        done
-    elif [ -f $1 ]; then
-        source $1
-    fi
+	if [ -d $1 ]; then
+		for content in $(\ls $1); do
+			if [ -d $1 ]; then
+				load_rcfile $1/$content
+			elif [ -f $1 ]; then
+				source $1/$content
+			fi
+		done
+	elif [ -f $1 ]; then
+		source $1
+	fi
 }
 
 load_rcfile ~/.bash/rc
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export ATUIN_NOBIND=1
-if `command -v atuin > /dev/null`; then
-		eval "$(atuin init bash)"
-		bind -x '"\C-r": __atuin_history'
+if $(command -v atuin >/dev/null); then
+	eval "$(atuin init bash)"
+	bind -x '"\C-r": __atuin_history'
 fi
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/gasolwu/.lmstudio/bin"
+
+# added by travis gem
+[ ! -s /Users/gasolwu/.travis/travis.sh ] || source /Users/gasolwu/.travis/travis.sh
