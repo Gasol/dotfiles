@@ -8,6 +8,14 @@ permissions:
   contents: read
 
 jobs:
+  # Tool versions come from mise.toml, so CI and local runs match.
+  lint:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: jdx/mise-action@v5
+      - run: make lint
+
   # No stow on the runner, so bootstrap-stow.sh downloads, verifies and builds 2.4.1.
   build-stow:
     runs-on: ubuntu-24.04
