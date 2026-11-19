@@ -38,7 +38,8 @@ owned() {
 		macos.sh bootstrap-stow.sh install-tpm.sh test.sh format.sh \
 		scripts/bin/agent-git-trees.sh scripts/bin/claude-notify scripts/bin/gcauto \
 		scripts/bin/git-auto-commit-codex scripts/bin/rfv \
-		':!config/dot-config/nvim/lazy-lock.json' ':!config/dot-config/nvim/lazyvim.json'
+		':!config/dot-config/nvim/lazy-lock.json' ':!config/dot-config/nvim/lazyvim.json' \
+		':!config/dot-config/nvim/lua/plugins/example.lua'
 }
 
 # Shell that shfmt and shellcheck understand. zsh scripts are skipped.
@@ -90,8 +91,11 @@ for f in $shell_files; do
 	bash/* | scripts/*) severity=error ;;
 	*) severity=warning ;;
 	esac
-	shfmt -ln "$(dialect "$f")" -d "$f" || status=1
-	shellcheck --severity="$severity" -s "$(dialect "$f")" "$f" || status=1
+	# shfmt calls the dialect "posix"; shellcheck calls it "sh".
+	d=$(dialect "$f")
+	if [ "$d" = posix ]; then sc="sh"; else sc=$d; fi
+	shfmt -ln "$d" -d "$f" || status=1
+	shellcheck --severity="$severity" -s "$sc" "$f" || status=1
 done
 # shellcheck disable=SC2086
 [ -n "$lua_files" ] && { stylua --check $lua_files || status=1; }
