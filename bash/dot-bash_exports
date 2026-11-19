@@ -2,47 +2,47 @@
 
 type -P most &>/dev/null
 if [ $? == 0 ]; then
-	MOST=`which most`
+	MOST=$(which most)
 fi
 case $(uname -s) in
-	Linux)
-		export JAVA_HOME="/usr/lib/jvm/java-6-sun"
-		export DEV_HOME="$HOME/dev"
-		export PATH="/var/lib/gems/1.8/bin:$PATH"
-		export APPENGINE_HOME="$DEV_HOME/google_appengine"
-		if [ -n "$MOST" ]; then export MANPAGER="$MOST -s"; fi
+Linux)
+	export JAVA_HOME="/usr/lib/jvm/java-6-sun"
+	export DEV_HOME="$HOME/dev"
+	export PATH="/var/lib/gems/1.8/bin:$PATH"
+	export APPENGINE_HOME="$DEV_HOME/google_appengine"
+	if [ -n "$MOST" ]; then export MANPAGER="$MOST -s"; fi
 	;;
-	Darwin)
-		export DEV_HOME="$HOME/Development"
-		export JAVA_HOME=$(/usr/libexec/java_home -v 11)
-		export APPENGINE_HOME="/usr/local/google_appengine"
-		export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
-		if [ -n "$MOST" ]; then export MANPAGER="$MOST -s"; fi
+Darwin)
+	export DEV_HOME="$HOME/Development"
+	export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+	export APPENGINE_HOME="/usr/local/google_appengine"
+	export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
+	if [ -n "$MOST" ]; then export MANPAGER="$MOST -s"; fi
 	;;
-	FreeBSD)
-		export DEV_HOME="$HOME/dev"
-		if [ -d /usr/local/openjdk6 ]; then
-			export JAVA_HOME="/usr/local/openjdk6"
-		elif [ -d /usr/local/openjdk7 ]; then
-			export JAVA_HOME="/usr/local/openjdk7"
-		fi
-		export APPENGINE_HOME="$DEV_HOME/google_appengine"
-		if [ -n "$MOST" ]; then alias man="man -P $MOST"; fi
+FreeBSD)
+	export DEV_HOME="$HOME/dev"
+	if [ -d /usr/local/openjdk6 ]; then
+		export JAVA_HOME="/usr/local/openjdk6"
+	elif [ -d /usr/local/openjdk7 ]; then
+		export JAVA_HOME="/usr/local/openjdk7"
+	fi
+	export APPENGINE_HOME="$DEV_HOME/google_appengine"
+	if [ -n "$MOST" ]; then alias man="man -P $MOST"; fi
 	;;
 esac
 
 if [ -z "$TERM" ]; then
 	case "$TERM_PROGRAM" in
-		iTerm.app)
-			if [ "${TERM_PROGRAM_VERSION%%.*}" -eq 3 ]; then
-				export TERM=iterm2
-			else
-				export TERM=iterm
-			fi
-			;;
-		Apple_Terminal)
-			export TERM=nsterm
-			;;
+	iTerm.app)
+		if [ "${TERM_PROGRAM_VERSION%%.*}" -eq 3 ]; then
+			export TERM=iterm2
+		else
+			export TERM=iterm
+		fi
+		;;
+	Apple_Terminal)
+		export TERM=nsterm
+		;;
 	esac
 fi
 
@@ -59,8 +59,8 @@ export MYSQL_PS1="(\u@\h) [\d]> "
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 if [ -e $HOME/.ec2 ]; then
-	export EC2_PRIVATE_KEY=`\find $HOME/.ec2 -maxdepth 1 -name 'pk-*.pem' 2> /dev/null`
-	export EC2_CERT=`\find $HOME/.ec2 -maxdepth 1 -name 'cert-*.pem' 2> /dev/null`
+	export EC2_PRIVATE_KEY=$(\find $HOME/.ec2 -maxdepth 1 -name 'pk-*.pem' 2>/dev/null)
+	export EC2_CERT=$(\find $HOME/.ec2 -maxdepth 1 -name 'cert-*.pem' 2>/dev/null)
 	export EC2_HOME="$DEV_HOME/ec2-api-tools"
 	export PATH="$EC2_HOME/bin:$PATH"
 fi

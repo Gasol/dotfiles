@@ -2,24 +2,24 @@
 alias ..='cd ..'
 alias ...='cd ../..'
 
-case $(uname -s) in 
-	Linux)
-		alias ls='ls --color=auto'
-		alias ll='ls -alF'
-		alias la='ls -A'
-		alias junipernc='junipernc -nojava'
-		alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
-		;;
-	Darwin|FreeBSD)
-		alias ls="ls -GF"
-		alias la="ls -AF"
-		alias ll="ls -lF"
-		alias vi="vim"
-		#enables color in the terminal bash shell export
-		export CLICOLOR=1
-		#sets up the color scheme for list export
-		export LSCOLORS="ExfxcxdxbxEgEdabagacad"
-		;;
+case $(uname -s) in
+Linux)
+	alias ls='ls --color=auto'
+	alias ll='ls -alF'
+	alias la='ls -A'
+	alias junipernc='junipernc -nojava'
+	alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
+	;;
+Darwin | FreeBSD)
+	alias ls="ls -GF"
+	alias la="ls -AF"
+	alias ll="ls -lF"
+	alias vi="vim"
+	#enables color in the terminal bash shell export
+	export CLICOLOR=1
+	#sets up the color scheme for list export
+	export LSCOLORS="ExfxcxdxbxEgEdabagacad"
+	;;
 esac
 
 alias cps='php -n -d extension=phar.so -d extension=json.so -d extension=iconv.so -d allow_url_fopen=On `which composer` --ansi'
@@ -59,8 +59,7 @@ fi
 # Sandeep Mehta <sxm@philabs.Philips.Com>
 ##########################################
 
-repeat()
-{
+repeat() {
 	local rcount=$1
 
 	if [ $# -le 1 ] || [ -z "$rcount" ]; then
@@ -87,14 +86,14 @@ repeat()
 	return $st
 }
 
-datetime()
-{
+datetime() {
 	case "$(uname -s)" in
-		(FreeBSD|Darwin)
-			date -r $1 +"%FT%T%z"
-			;;
-		(Linux)
-			date -d "@$1" -Iseconds
+	FreeBSD | Darwin)
+		date -r $1 +"%FT%T%z"
+		;;
+	Linux)
+		date -d "@$1" -Iseconds
+		;;
 	esac
 }
 

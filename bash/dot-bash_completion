@@ -1,26 +1,27 @@
 # vim: set ft=sh:
 
 have phpunit &&
-_phpunit()
-{
-    local cur prev opts
+	_phpunit() {
+		local cur prev opts
 
-    COMPREPLY=()
-    _get_comp_words_by_ref cur prev
+		COMPREPLY=()
+		_get_comp_words_by_ref cur prev
 
-    opts="--log-junit --log-tap --log-json --coverage-html --coverage-clover \
+		# editorconfig-checker-disable
+		opts="--log-junit --log-tap --log-json --coverage-html --coverage-clover \
     --coverage-source --story-html --story-text --testdox-html --testdox-text \
     --filter --group --exclude-group --list-groups --loader --repeat --story \
     --tap --testdox --colors --stderr --stop-on-failure --verbose --wait \
     --skeleton-class --skeleton-test --process-isolation --no-globals-backup \
     --static-backup --syntax-check --bootstrap --configuration --no-configuration \
     --include-path -d --help --verison"
+		# editorconfig-checker-enable
 
-    if [[ ${cur} == -* ]] ; then
-        COMPREPLY=($(compgen -W "${opts}" -- ${cur}))
-        return 0
-    fi
+		if [[ ${cur} == -* ]]; then
+			COMPREPLY=($(compgen -W "${opts}" -- ${cur}))
+			return 0
+		fi
 
-    return 0
-} &&
-complete -F _phpunit -o default phpunit
+		return 0
+	} &&
+		complete -F _phpunit -o default phpunit
