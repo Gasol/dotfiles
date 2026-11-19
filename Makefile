@@ -2,14 +2,14 @@
 # Logic lives in bootstrap-stow.sh and test.sh.
 
 TARGET ?= $(HOME)
-PACKAGES = bash config git irssi misc tmux vcs
+PACKAGES = bash config git irssi misc scripts tmux vcs
 
 .PHONY: install uninstall check test macos
 
-# .config must exist before stow runs, or stow folds it into one symlink
-# and every app then writes its data into this repository.
+# .config and bin must exist before stow runs, or stow folds each into one
+# symlink and every app or tool then writes its data into this repository.
 install:
-	@mkdir -p $(TARGET)/.config
+	@mkdir -p $(TARGET)/.config $(TARGET)/bin
 	@STOW=$$(sh ./bootstrap-stow.sh) && $$STOW -t $(TARGET) $(PACKAGES)
 	@if [ "$(TARGET)" = "$$HOME" ]; then $(MAKE) macos; fi
 

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Capture tmux context for the pane where Claude is running (not the current view)
+SESSION=$(tmux display-message -t "$TMUX_PANE" -p '#{session_name}')
+WINDOW=$(tmux display-message -t "$TMUX_PANE" -p '#{window_index}')
+WINDOW_NAME=$(tmux display-message -t "$TMUX_PANE" -p '#{window_name}')
+SOCKET=$(echo "$TMUX" | cut -d',' -f1)
+CLIENT=$(tmux display-message -p '#{client_tty}')
+
+#terminal-notifier \
+#  -title "Claude Code" \
+#  -subtitle "$SESSION:$WINDOW_NAME" \
+#  -message "${1:-Waiting for input}" \
+#  -sound default \
+#  -activate com.mitchellh.ghostty \
+#  -execute "/opt/homebrew/bin/tmux -S $SOCKET switch-client -c '$CLIENT' -t '$SESSION:$WINDOW'"
