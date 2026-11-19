@@ -1,2 +1,6 @@
+CLAUDE.local.md
+GEMINI.local.md
 .DS_Store
+.claude/*.local.json
 *.sw?
+.claude/worktrees/
