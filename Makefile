@@ -1,52 +1,26 @@
+# Plain syntax only: this file must run under GNU make and BSD make.
+# Logic lives in bootstrap-stow.sh and test.sh.
 
-ROOT_DIR := $(shell dirname "$(realpath $(firstword $(MAKEFILE_LIST)))")
+TARGET ?= $(HOME)
+PACKAGES = bash config git irssi misc tmux vcs
 
-CURL              := $(shell which curl)
-STOW              := $(ROOT_DIR)/bin/stow
-STOW_EXCLUDES     := bin scripts
-STOW_LIST         := $(filter-out $(STOW_EXCLUDES),$(patsubst %/,%,$(wildcard */)))
-STOW_VERSION      := 2.3.1
-STOW_TARBALL_FILE := stow-$(STOW_VERSION).tar.gz
-STOW_TARBALL_URL  := https://ftp.gnu.org/gnu/stow/$(STOW_TARBALL_FILE)
-SYSTEM_STOW       := $(shell which stow)
-ifeq ($(SYSTEM_STOW), )
-    STOW_DEPS := stow
-endif
+.PHONY: install uninstall check test macos
 
-$(STOW_TARBALL_FILE):
-	$(CURL) -LO $(STOW_TARBALL_URL)
+# .config must exist before stow runs, or stow folds it into one symlink
+# and every app then writes its data into this repository.
+install:
+	@mkdir -p $(TARGET)/.config
+	@STOW=$$(sh ./bootstrap-stow.sh) && $$STOW -t $(TARGET) $(PACKAGES)
+	@if [ "$(TARGET)" = "$$HOME" ]; then $(MAKE) macos; fi
 
-stow-$(STOW_VERSION): $(STOW_TARBALL_FILE)
-	tar zxvf $<
+uninstall:
+	@STOW=$$(sh ./bootstrap-stow.sh) && $$STOW -D -t $(TARGET) $(PACKAGES)
 
-stow: stow-$(STOW_VERSION)
-	@(set -e ; \
-		cd stow-$(STOW_VERSION) ; \
-		./configure --prefix=$(ROOT_DIR)/$@ ; \
-		make install)
-
-bin:
-	mkdir -p $@
-
-bin/stow: bin $(STOW_DEPS)
-	@if [ -n "$(SYSTEM_STOW)" ]; then \
-			source="$(SYSTEM_STOW)" ; \
-		else \
-			source="$(ROOT_DIR)/stow/bin/stow" ; \
-		fi ; \
-		ln -s "$$source" "$(STOW)"; \
-		touch "$$source"
-
-clean:
-	-rm -rf stow-$(STOW_VERSION)
-	-rm $(STOW_TARBALL_FILE)
-
-install: bin/stow
-	@for f in $(STOW_LIST); do \
-		echo "Stowing $$f..." ; \
-		$(STOW) --dotfiles $$f ; \
-		done
+check:
+	@STOW=$$(sh ./bootstrap-stow.sh) && $$STOW -n -v -t $(TARGET) $(PACKAGES)
 
 test:
+	@sh ./test.sh
 
-.PHONY: clean install install-stow
+macos:
+	@if [ "$$(uname -s)" = Darwin ]; then sh ./macos.sh; else echo "macos: skipped, not Darwin"; fi
