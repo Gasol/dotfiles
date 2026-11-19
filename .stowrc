@@ -1,0 +1,3 @@
+--dotfiles
+--target=~
+--ignore=\.DS_Store
