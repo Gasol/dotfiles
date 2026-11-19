@@ -13,6 +13,6 @@ PERLBREW_RC="$HOME/perl5/perlbrew/etc/bashrc"
 [ -f "$PERLBREW_RC" ] && source "$PERLBREW_RC"
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/gasolwu/.lmstudio/bin"
+export PATH="$PATH:$HOME/.lmstudio/bin"
 
 complete -C /opt/homebrew/bin/terraform terraform

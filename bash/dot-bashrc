@@ -70,7 +70,7 @@ if $(command -v atuin >/dev/null); then
 fi
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/gasolwu/.lmstudio/bin"
+export PATH="$PATH:$HOME/.lmstudio/bin"
 
 # added by travis gem
-[ ! -s /Users/gasolwu/.travis/travis.sh ] || source /Users/gasolwu/.travis/travis.sh
+[ ! -s "$HOME/.travis/travis.sh" ] || source "$HOME/.travis/travis.sh"
