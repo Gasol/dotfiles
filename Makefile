@@ -4,7 +4,7 @@
 TARGET ?= $(HOME)
 PACKAGES = bash config git irssi misc scripts tmux vcs
 
-.PHONY: install uninstall check test macos
+.PHONY: install uninstall check test lint fmt macos
 
 # .config and bin must exist before stow runs, or stow folds each into one
 # symlink and every app or tool then writes its data into this repository.
@@ -22,6 +22,12 @@ check:
 
 test:
 	@sh ./test.sh
+
+lint:
+	@sh ./format.sh check
+
+fmt:
+	@sh ./format.sh write
 
 macos:
 	@if [ "$$(uname -s)" = Darwin ]; then sh ./macos.sh; else echo "macos: skipped, not Darwin"; fi

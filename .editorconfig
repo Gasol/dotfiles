@@ -13,6 +13,11 @@ trim_trailing_whitespace = false
 [{Makefile,*.sh,*.json,bash/**,scripts/bin/*}]
 indent_style = tab
 
+# zsh is outside shfmt and shellcheck, so keep its existing 4 spaces.
+[scripts/bin/agent-git-trees.sh]
+indent_style = space
+indent_size = 4
+
 # Matches config/dot-config/nvim/stylua.toml, which stylua reads first.
 [*.lua]
 indent_style = space
