@@ -2,6 +2,7 @@
 [user]
     name = Gasol Wu
     email = gasol.wu@gmail.com
+    signingkey = "key::ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBq2rPWO/RTidHDroiBkFXQ2NcG1aEIRtGvOb0iOuRDm"
 [color]
     ui = auto
     diff = auto
@@ -15,13 +16,14 @@
     old = red bold
     new = green bold
 [alias]
-    branches =  for-each-ref --sort=-committerdate --format='%(committerdate:format:%Y-%m-%dT%H:%M:%S%z) %(refname:short) %(committername)'
+    branches =  for-each-ref --sort=-committerdate --format='%(committerdate:format:%Y-%m-%dT%H:%M:%S%z) %(refname) %(committername)'
     cm = commit
     ca = commit --amend
     df = diff
     rb = rebase
     rbc = rebase --continue
     rba = rebase --abort
+    rbe = rebase --edit-todo
     st = status
     co = checkout
     br = branch
@@ -29,12 +31,46 @@
     who = shortlog -s --
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 [core]
-	excludesfile = ~/.gitignore
+    pager = delta
+    #pager = hunk pager
+	excludesfile = /Users/gasolwu/.gitignore
 [init]
 	defaultBranch = main
 [pull]
 	rebase = false
 [merge]
 	tool = nvimdiff
+    conflictstyle = zdiff3
 [rerere]
 	enabled = true
+[log]
+    excludeDecoration = refs/branchless/*
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true  # use n and N to move between diff sections
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[blame]
+    #ignoreRevsFile = .git-blame-ignore-revs
+[diff]
+    algorithm = histogram
+[url "https://github.com/anthropics/"]
+	insteadOf = ssh://git@github.com/anthropics/
+[gpg]
+	format = ssh
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
