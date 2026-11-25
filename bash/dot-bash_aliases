@@ -7,7 +7,6 @@ Linux)
 	alias ls='ls --color=auto'
 	alias ll='ls -alF'
 	alias la='ls -A'
-	alias junipernc='junipernc -nojava'
 	alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
 	;;
 Darwin | FreeBSD)
