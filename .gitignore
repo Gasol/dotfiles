@@ -1,9 +1,2 @@
-bin/stow
-config/dot-config/*
-!config/dot-config/nvim/
-!config/dot-config/powerline/
-tmux/dot-tmux/plugins/*
-stow*
+.DS_Store
 *.swp
-_vim/.netrwhist
-_irssi/startup
