@@ -28,7 +28,7 @@ for d in .config bin; do
 done
 pass ".config and bin are real directories"
 
-[ -L "$TARGET/bin/gcauto" ] || fail "bin/gcauto is not a symlink"
+[ -L "$TARGET/bin/rfv" ] || fail "bin/rfv is not a symlink"
 [ -f "$TARGET/bin/untracked-tool" ] && [ ! -L "$TARGET/bin/untracked-tool" ] || fail "an existing file in bin was replaced"
 [ ! -e "$repo/scripts/bin/untracked-tool" ] || fail "an untracked tool reached the repo"
 pass "scripts link into an existing bin and leave other files alone"

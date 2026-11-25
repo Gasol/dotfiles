@@ -36,7 +36,7 @@ owned() {
 		config/dot-config/alacritty config/dot-config/neomutt \
 		.editorconfig .gitignore .stowrc .github mise.toml Makefile README.md \
 		macos.sh bootstrap-stow.sh install-tpm.sh test.sh format.sh \
-		scripts/bin/agent-git-trees.sh scripts/bin/claude-notify scripts/bin/gcauto \
+		scripts/bin/agent-git-trees.sh scripts/bin/claude-notify \
 		scripts/bin/git-auto-commit-codex scripts/bin/rfv \
 		':!config/dot-config/nvim/lazy-lock.json' ':!config/dot-config/nvim/lazyvim.json' \
 		':!config/dot-config/nvim/lua/plugins/example.lua'
