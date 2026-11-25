@@ -1,7 +1,0 @@
-#!/bin/sh
-if [ -z $CLOSURE_HOME ]; then
-	echo 'set $CLOSURE_HOME first'
-	exit
-fi
-
-java -jar $CLOSURE_HOME/compiler.jar $*
